@@ -1,0 +1,112 @@
+body {
+    font-family: 'Roboto';
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+button {
+    border: 0;
+    outline: 0;
+}
+
+
+/* 헤더 */
+.resister__header {
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #c1c1c1;
+    background-color: #ffffff;
+    color: black;
+    z-index: 1;
+}
+
+.resister__header_logo span {
+    font-size: 1.5rem;
+    color: #424242;
+    font-weight: 800;
+    padding: 0px 8px 0px 0px;
+    margin: 0px 8px 0px 0px;
+}
+
+.resister__header_title {
+    font-size: 11px;
+    color: #424242;
+}
+
+
+/* 회원 가입 폼 */
+.resister__form_inputPage {
+    margin: 24px 0px 16px;
+    padding: 32px 24px 40px;
+}
+
+.resister__content {
+    padding: 0px 24px;
+}
+
+.resister__content .resister__content_title {
+    margin: 0;
+    display: block;
+    font-size: 24px;
+    padding: 20px 0px 24px;
+    border-bottom: 1px solid #c1c1c1;
+}
+
+/* 회원 가입 이메일 */
+.resister__form_email_section div{
+    display: flex;
+    flex-direction: column;
+}
+
+.resister__form_email_label {
+    font-size: 14px;
+    padding: 0px 0px 4px;
+}
+
+.resister__form_email_section input {
+    padding: 0px 16px;
+    height: 48px;
+    border: 1px solid #c1c1c1;
+}
+
+.blankspan {
+    display: block;
+    margin: 10px;
+}
+
+/* 회원 가입 비밀번호*/
+.resister__form_password_section div{
+    display: flex;
+    flex-direction: column;
+}
+
+.resister__form_password_label {
+    font-size: 14px;
+    padding: 0px 0px 4px;
+}
+
+.resister__form_password_section input {
+    padding: 0px 16px;
+    height: 48px;
+    border: 1px solid #c1c1c1;
+}
+
+#resister__form_nextBtn {
+    margin: 24px 0px 0px;
+    padding: 12px;
+    width: 100%;
+    height: 48px;
+
+    color: #ffffff;
+    background-color: #000;
+}

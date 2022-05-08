@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="resister_style.css">
+    <script src="https://kit.fontawesome.com/bb430ea525.js" 
+    crossorigin="anonymous"></script>
+    <title>계정 만들기</title>
+</head>
+<body>
+    <!-- 헤더-->
+    <header class="resister__header">
+        <a href="#" class="resister__header_logo">
+            <span>JANGBOGO</span>
+        </a>
+        <span class="resister__header_title">새로운 계정 생성</span>
+    </header>
+
+    <nav class="resister__formBar">
+        <form>
+            <input type="hidden">
+            <a href="#" class="page_backBtn" style="display: hidden;">
+                <i class="fa-solid fa-arrow-left-long"></i>
+            </a>
+        </form>
+    </nav>
+
+    <!-- 회원 가입 입력 -->
+    <section class="resister__content">
+        <h1 class="resister__content_title">
+            <span>새로운 계정 생성</span>
+        </h1>
+
+        <form class="resister_form">
+            <h2 class="h2_personal">
+                <span class="resister__section_title">로그인 정보</span>
+            </h2>
+            
+            <div class="resister__form_inputPage">
+                <div class="resister__form_email_section">
+                    <div class="resister__form_email">
+                        <label class="resister__form_email_label" for="resister__email">이메일*</label>
+                        <input id="resister__email" type="email" placeholder="예) name@example.com" required>
+                        <span class="blankspan"></span>
+                    </div>
+                    <div class="resister__form_emailCheck">
+                        <label class="resister__form_email_label" for="resister__emailCheck">이메일 확인*</label>
+                        <input id="resister__emailCheck" type="email" placeholder="예) name@example.com" required>
+                        <span class="blankspan"></span>
+                    </div>
+                </div>
+    
+                <div class="resister__form_password_section">
+                    <div class="resister__form_password">
+                        <label class="resister__form_password_label" for="resister__password">비밀번호*</label>
+                        <input id="resister__password" type="password" required>
+                        <span class="blankspan"></span>
+                    </div>
+                    <div class="resister__form_passwordCheck">
+                        <label class="resister__form_password_label" for="resister__passwordCheck">비밀번호 확인*</label>
+                        <input id="resister__passwordCheck" type="password" required>
+                        <span class="blankspan"></span>
+                    </div>
+                </div>
+            </div>
+
+            <input id="resister__form_nextBtn" type="button" value="다음">
+        </form>
+    </section>
+</body>
+</html>
