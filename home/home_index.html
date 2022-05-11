@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="home_style.css">
     <script src="https://kit.fontawesome.com/bb430ea525.js" 
     crossorigin="anonymous"></script>
-    
+
     <title>장보고</title>
 </head>
 
@@ -109,15 +109,15 @@
                         </h1>
                         <hr>
                     </nav>
-            
+
                     <section class="login__form">
                         <div class="login__form_title">로그인</div>
                         <div class="login__email_board">   
                             <label for="login__email">이메일*</label><br>
                             <input type="email" id="login__email" dir="auto"
-                            required aria-invalid="false"><br>
+                            required aria-invalid="false" placeholder="  name@example.com"><br>
                         </div>
-            
+
                         <div class="login__password_board">
                             <label for="login__password">비밀번호*</label><br>
                             <input type="password" id="login__password" dir="auto" 
@@ -125,14 +125,14 @@
                             <button type="button" class="login__form_findPass">
                                 비밀번호를 잊어버리셨나요?</button>
                         </div>
-            
+
                         <button type="submit" class="login__form_loginBtn">로그인</button>
                     </section>
-            
+
                     <section class="login__resister">
                         <div class="login__resister_title">새로 오셨나요?</div>
                         <p>개인 계정을 생성하시면 다양한 기능을 사용하실 수 있습니다.</p>
-                        <a href="#">새로운 계정 만들기</a>
+                        <a href="resister_index.html">새로운 계정 만들기</a>
                     </section>
                 </div>
             </div>
@@ -149,19 +149,12 @@
 
         <!-- 시장 위치 및 이름 -->
         <section class="market__location">
-            <span class="market__location_prev">
-                <a href="#">
-                    <i class="fa-solid fa-angle-left"></i>
-                </a>
-            </span>
             <a href="#">
                 <span class="market__location_name">내 위치 최저가 : 중랑구</span>
             </a>
-            <span class="market__location_next">
-                <a href="#">
-                    <i class="fa-solid fa-angle-right"></i>
-                </a>
-            </span>
+            <button class="location_gps">
+                    <i class="fa-solid fa-location-crosshairs"></i>
+            </button>
         </section>
 
         <!-- 시장 품목 조회 -->

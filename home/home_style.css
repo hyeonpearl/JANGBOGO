@@ -1,8 +1,6 @@
 /* 전체 */
 :root {
-    --main-color: #B5AB87;
     --back-color: white;
-    --accent-color: #005B47;
     --black-color: #2c2c2c;
 }
 
@@ -43,6 +41,7 @@ a {
     background-color: var(--back-color);
     padding: 12px 24px;
     border-bottom: 1px solid #c1c1c1;
+    z-index: 2;
 }
 
 .navbar__logo {
@@ -195,6 +194,7 @@ a {
     left: 0;
     z-index: 1;
     transition: all .35s;
+    border-bottom: 1px solid #c1c1c1;
 }
 
 #navbar__searchbtn:checked + label + div {
@@ -365,16 +365,20 @@ a {
 
 
 /* 매장 자치구 및 이름 */
+.location_gps {
+    font-size: 24px;
+    background-color: #fff;
+}
+
 .market__location {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     font-weight: 700;
     font-size: 20px;
     color: var(--black-color);
     padding: 12px 18px;
     box-shadow: 1px 1px #c1c1c1;
-
 }
 
 /* 표시된 매장의 품목 (사과, 배, 배추, 무) */
@@ -392,12 +396,3 @@ a {
     font-size: 16px;
     font-weight: 900;
 }
-
-
-
-
-
-
-
-
-
