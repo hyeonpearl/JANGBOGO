@@ -46,8 +46,7 @@ button {
 
 /* 회원 가입 폼 */
 .resister__form_inputPage {
-    margin: 24px 0px 16px;
-    padding: 32px 24px 40px;
+    padding: 16px 24px 40px;
 }
 
 .resister__content {
@@ -110,3 +109,31 @@ button {
     color: #ffffff;
     background-color: #000;
 }
+
+/* 사용자 정보 */
+.resister__form_user_section div {
+    display: flex;
+    flex-direction: column;
+}
+
+.resister__form_user_section label {
+    font-size: 14px;
+    padding: 0px 0px 4px;
+}
+
+.resister__form_user_section input {
+    padding: 0px 16px;
+    height: 48px;
+    border: 1px solid #c1c1c1;
+}
+
+#resister__form_tel {
+    background-color: #000;
+    color: #ffffff;
+}
+
+
+
+
+
+
