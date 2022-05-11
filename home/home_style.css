@@ -295,7 +295,7 @@ a {
 }
 
 .login__header_title .login__close {
-    color: #000000;
+    color: var(--black-color);
 }
 
 .login__form .login__form_title {
@@ -340,7 +340,7 @@ a {
 .login__resister .login__resister_title {
     padding: 20px 0px;
     font-size: 24px;
-    font-weight: bolder;
+    font-weight: 800;
 }
 
 .login__resister {
