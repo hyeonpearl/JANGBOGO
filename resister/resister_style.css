@@ -46,18 +46,18 @@ button {
 
 /* 회원 가입 폼 */
 .resister__form_inputPage {
-    padding: 16px 24px 40px;
+    padding: 0px 24px 24px;
 }
 
 .resister__content {
-    padding: 0px 24px;
+    padding: 0px 24px 24px;
 }
 
-.resister__content .resister__content_title {
+.resister__content_title {
     margin: 0;
-    display: block;
-    font-size: 24px;
-    padding: 20px 0px 24px;
+    left: 30px;
+    font-size: 20px;
+    padding: 20px;
     border-bottom: 1px solid #c1c1c1;
 }
 
@@ -100,8 +100,8 @@ button {
     border: 1px solid #c1c1c1;
 }
 
-#resister__form_nextBtn {
-    margin: 24px 0px 0px;
+#resister__form_resister {
+    margin-bottom: 24px;
     padding: 12px;
     width: 100%;
     height: 48px;
