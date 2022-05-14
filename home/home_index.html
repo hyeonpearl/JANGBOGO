@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="home_style.css">
     <script src="https://kit.fontawesome.com/bb430ea525.js" 
     crossorigin="anonymous"></script>
+    <script src="home_main.js"></script>
 
     <title>장보고</title>
 </head>
@@ -17,7 +18,7 @@
     <nav class="navbar">
         <!-- 사이드 메뉴 -->
         <div class="navber__side">
-            <input type="checkbox" id="navbar__sidebtn">
+            <input type="checkbox" id="navbar__sidebtn" onclick="menuOn()">
             <label for="navbar__sidebtn">
                 <span></span>
                 <span></span>
@@ -26,6 +27,7 @@
             <!-- 사이드 메뉴 클릭 시 화면-->
             <div class="navbar__sidebar">
                 <div class="sidebar__content">
+                    <nav></nav>
                     <div class="category">
                         <div class="category__meet">
                             <a href="#">
@@ -72,18 +74,19 @@
 
         <!-- 검색 -->
         <div class="navbar__search">
-            <input type="checkbox" id="navbar__searchbtn">
+            <input type="checkbox" id="navbar__searchbtn" onclick="searchOn()">
             <label for="navbar__searchbtn">
                 <i class="fa-brands fa-sistrix"></i>
             </label>
             <!-- 검색 버튼 클릭 시 화면 -->
             <div class="navbar__searchbar">
+                <nav></nav>
                 <div class="search__content">
                     <label for="navbar__search_input">
                         <i class="fa-brands fa-sistrix"></i>
                     </label>
                     <input type="text" id="navbar__search_input" 
-                    placeholder="  '매장' 및 '품목'을 검색해보세요!">
+                    placeholder="'매장' 및 '품목'을 검색해보세요!">
                 </div>
             </div>
         </div>
@@ -95,45 +98,64 @@
         <div class="navbar__sign">
             <input type="checkbox" id="navbar__signbtn">
             <label for="navbar__signbtn">
-                <span></span>
-                <span></span>
-                <span></span>
-                <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                <i id="cheOff" class="fa-solid fa-arrow-right-to-bracket" onclick="checkOn()"></i>
+                <i id="cheOn" class="fa-solid fa-x" onclick="checkOff()"></i>
             </label>
+
             <!-- 로그인 버튼 클릭 시 화면-->
             <div class="navbar__signbar">
-                <div class="login__content">
-                    <nav class="login__header" style="height: 76px">
-                        <h1 class="login__header_title">
-                            <span>개인정보</span>
-                        </h1>
-                        <hr>
-                    </nav>
+                    <h1 class="login__header_title">
+                        <span>개인정보</span>
+                    </h1>
+                    <hr>
 
+                <div class="login__content">
                     <section class="login__form">
-                        <div class="login__form_title">로그인</div>
+                        <form>
+                            <div class="login__form_title">로그인</div>
                         <div class="login__email_board">   
                             <label for="login__email">이메일*</label><br>
                             <input type="email" id="login__email" dir="auto"
-                            required aria-invalid="false" placeholder="  name@example.com"><br>
+                            required aria-invalid="false" placeholder="name@example.com"><br>
                         </div>
 
                         <div class="login__password_board">
                             <label for="login__password">비밀번호*</label><br>
                             <input type="password" id="login__password" dir="auto" 
                             required aria-invalid="false"><br>
-                            <button type="button" class="login__form_findPass">
-                                비밀번호를 잊어버리셨나요?</button>
+                            <button type="button" class="login__form_findPass" onclick="findPass()">
+                                비밀번호를 잊어버리셨나요?
+                            </button>
                         </div>
 
                         <button type="submit" class="login__form_loginBtn">로그인</button>
+                        </form>
+                    </section>
+
+                    <section class="login__findpass">
+                        <h1 class="findpass_title">비밀번호 찾기</h1>
+                        <p>이메일로 새로운 비밀번호를 받으시려면 아래에 이메일 주소를 입력해주세요.</p>
+                        <form action="">
+                            <div class="findpass__email_board">   
+                                <label for="findpass__email">이메일*</label><br>
+                                <input type="email" id="findpass__email" dir="auto"
+                                required aria-invalid="false" placeholder="name@example.com"><br>
+                            </div>
+
+                            <div class="findpass__btn">
+                                <button type="submit" class="findpass_ok">전송</button>
+                                <button type="button" class="findpass_cancle" onclick="backLogin()">취소</button>
+                            </div>
+                        </form>
                     </section>
 
                     <section class="login__resister">
                         <div class="login__resister_title">새로 오셨나요?</div>
                         <p>개인 계정을 생성하시면 다양한 기능을 사용하실 수 있습니다.</p>
-                        <a href="resister_index.html">새로운 계정 만들기</a>
+                        <a href="/resister/resister_index.html">새로운 계정 만들기</a>
                     </section>
+
+                    
                 </div>
             </div>
         </div>
@@ -143,15 +165,14 @@
         <!-- 메인 화면 비디오 -->
         <section class="market__video">
             <video loop muted autoplay width="100%" height="100%">
-                <source src="File/market_video.mp4">
+                <source src="/File/home_video.mp4">
             </video>
         </section>
 
         <!-- 시장 위치 및 이름 -->
         <section class="market__location">
-            <a href="#">
-                <span class="market__location_name">내 위치 최저가 : 중랑구</span>
-            </a>
+            <span>내 위치 최저가 :&nbsp;</span>
+            <a href="#" class="market__location_name">중랑구</a>
             <button class="location_gps">
                     <i class="fa-solid fa-location-crosshairs"></i>
             </button>
@@ -161,13 +182,13 @@
         <section class="market__fruit">
             <ul class="market__fruit_list">
                 <li class="apple">
-                    <div class="image"><img src="File/apple.png" height="120" width="120"></div>
+                    <div class="image"><img src="/File/home_apple.png" height="120" width="120"></div>
                     <div class="title">사과(부사, 300g)</div>
                     <div class="unit">(단위 : 1개)</div>
                     <div class="price">2,225원</div>
                 </li>
                 <li class="pear">
-                    <div class="image"><img src="File/pear.png" height="120" width="120"></div>
+                    <div class="image"><img src="/File/home_pear.png" height="120" width="120"></div>
                     <div class="title">배(신고, 600g)</div>
                     <div class="unit">(단위 : 1개)</div>
                     <div class="price">4,000원</div>
@@ -175,13 +196,13 @@
             </ul>
             <ul class="market__fruit_list">
                 <li class="cabbage">
-                    <div class="image"><img src="File/cabbage.png" height="120" width="120"></div>
+                    <div class="image"><img src="/File/home_cabbage.png" height="120" width="120"></div>
                     <div class="title">배추(2.5~3kg)</div>
                     <div class="unit">(단위 : 1포기)</div>
                     <div class="price">2,600원</div>
                 </li>
                 <li class="radish">
-                    <div class="image"><img src="File/radish.png" height="120" width="120"></div>
+                    <div class="image"><img src="/File/home_radish.png" height="120" width="120"></div>
                     <div class="title">무(1kg)</div>
                     <div class="unit">(단위 : 1kg)</div>
                     <div class="price">1,000원</div>
