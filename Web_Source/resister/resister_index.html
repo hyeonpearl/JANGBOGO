@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="resister_style.css">
+    <script src="https://kit.fontawesome.com/bb430ea525.js" 
+    crossorigin="anonymous"></script>
+    <script src="resister_main.js"></script>
+    
+    <title>계정 만들기</title>
+</head>
+<body>
+    <!-- 헤더-->
+    <header class="resister__header">
+        <a href="/home/home_index.html" class="resister__header_logo">
+            <span>JANGBOGO</span>
+        </a>
+        <span class="resister__header_title">새로운 계정 생성</span>
+    </header>
+
+    <!-- 회원 가입 입력 -->
+    <h1 class="resister__content_title">
+        <span>새로운 계정 생성</span>
+    </h1>
+    <section class="resister__content">
+        <form class="resister_form">
+            <div class="resister__form_inputPage">
+                <h2 class="h3_personal">
+                    <span class="resister__section_title">로그인 정보</span>
+                </h2>
+
+                <div class="resister__form_email_section">
+                    <div class="resister__form_email">
+                        <label class="resister__form_email_label" for="resister__email">이메일*</label>
+                        <input id="resister__email" type="email" placeholder="예) name@example.com" required>
+                        <span class="blankspan"></span>
+                    </div>
+                </div>
+    
+                <div class="resister__form_password_section">
+                    <div class="resister__form_password">
+                        <label class="resister__form_password_label" for="resister__password">비밀번호*</label>
+                        <input id="resister__password" type="password" required>
+                        <span class="blankspan"></span>
+                    </div>
+                    <div class="resister__form_passwordCheck">
+                        <label class="resister__form_password_label" for="resister__passwordCheck">비밀번호 확인*</label>
+                        <input id="resister__passwordCheck" type="password" required>
+                        <span class="blankspan"></span>
+                    </div>
+                </div>
+
+                <h2 class="h3_personal">
+                    <span class="resister__section_title">사용자 정보</span>
+                </h2>
+
+                <div class="resister__form_user_section">
+                    <div class="resister__form_name">
+                        <label class="resister__form_name_label" for="resister__form_name">이름*</label>
+                        <input type="text" id="resister__form_name" required>
+                        <span class="blankspan"></span>
+                    </div>
+
+                    <div class="resister__form_address">
+                        <label class="resister__form_name_label" for="resister__form_address">주소*</label>
+                        <input type="text" id="resister__form_address" placeholder="예) 서울시 중랑구" required>
+                        <span class="blankspan"></span>
+                    </div>
+
+                    <div class="resister__form_tel">
+                        <label class="resister__form_tel_label" for="resister__form_tel">전화번호*</label>
+                        <input type="button" value="전화번호 인증" id="resister__form_tel" required>
+                        <span class="blankspan"></span>
+                    </div>
+                </div>
+            </div>
+
+            <button id="resister__form_submit" type="submit">확인</button>
+            <button id="resister__form_cancle" type="button" onclick="backHome()">취소</button>
+        </form>
+    </section>
+</body>
+</html>
