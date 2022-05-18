@@ -2,6 +2,7 @@
 :root {
     --back-color: white;
     --black-color: #2c2c2c;
+    --gray-color: #c1c1c1;
 }
 
 body {
@@ -486,4 +487,21 @@ a {
     margin-top: 4px;
     font-size: 12px;
     color: #666666;
+}
+
+/* 지역 추천 */
+.home__location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home__locationBtn {
+    padding: 13px 50px;
+    background-color: var(--back-color);
+}
+
+.home__location #locationTitle {
+    font-size: 15px;
+    color: var(--black-color);
 }

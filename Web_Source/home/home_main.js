@@ -105,5 +105,7 @@ document.addEventListener('DOMContentLoaded', function(){
     banner.rollInit(4000); // 배너 롤링
 });
 
-
+function setGPS() {
+        
+}
 
