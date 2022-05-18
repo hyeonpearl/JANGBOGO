@@ -1,6 +1,8 @@
+/* 전체 */
 :root {
     --back-color: white;
     --black-color: #2c2c2c;
+    --gray-color: #c1c1c1;
 }
 
 body {
@@ -9,17 +11,24 @@ body {
     padding: 0px;
 }
 
-a {
-    text-decoration: none;
-}
-
-ul li {
-    list-style: none;
+h1 {
+    margin-bottom: 15px;
 }
 
 button {
-    border: 0;
     outline: 0;
+    border: 0;
+}
+
+ul, ol, li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--black-color);
 }
 
 
@@ -106,7 +115,7 @@ button {
 }
 
 #resister__form_submit {
-    margin-bottom: 24px;
+    margin-bottom: 8px;
     padding: 12px;
     width: 100%;
     height: 48px;
