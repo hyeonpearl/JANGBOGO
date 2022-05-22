@@ -76,20 +76,9 @@ a {
 }
 
 /* 회원 가입 이메일 */
-.resister__form_email_section div{
+.resister__form_email_section div, .resister__form_password_section div{
     display: flex;
     flex-direction: column;
-}
-
-.resister__form_email_label {
-    font-size: 14px;
-    padding: 0px 0px 4px;
-}
-
-.resister__form_email_section input {
-    padding: 0px 16px;
-    height: 48px;
-    border: 1px solid #c1c1c1;
 }
 
 .blankspan {
@@ -98,22 +87,6 @@ a {
 }
 
 /* 회원 가입 비밀번호*/
-.resister__form_password_section div{
-    display: flex;
-    flex-direction: column;
-}
-
-.resister__form_password_label {
-    font-size: 14px;
-    padding: 0px 0px 4px;
-}
-
-.resister__form_password_section input {
-    padding: 0px 16px;
-    height: 48px;
-    border: 1px solid #c1c1c1;
-}
-
 #resister__form_submit {
     margin-bottom: 8px;
     padding: 12px;
@@ -139,18 +112,13 @@ a {
     flex-direction: column;
 }
 
-.resister__form_user_section label {
+.resister__form_email_label, .resister__form_password_label, .resister__form_user_section label {
     font-size: 14px;
     padding: 0px 0px 4px;
 }
 
-.resister__form_user_section input {
+.resister__form_email_section input, .resister__form_password_section input, .resister__form_user_section input, #resister__form_tel {
     padding: 0px 16px;
     height: 48px;
     border: 1px solid #c1c1c1;
-}
-
-#resister__form_tel {
-    background-color: #000;
-    color: #ffffff;
 }
