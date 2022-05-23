@@ -122,3 +122,15 @@ a {
     height: 48px;
     border: 1px solid #c1c1c1;
 }
+
+/* 알림 여부 */
+.resister__form_alter .alter_explain {
+    margin-bottom: 8px;
+    font-size: 13px;
+}
+
+.alter_service_email, .alter_service_tel {
+    font-size: 13px;
+    margin-right: 10px;
+}
+
