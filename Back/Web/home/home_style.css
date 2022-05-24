@@ -3,9 +3,10 @@
     --back-color: white;
     --black-color: #2c2c2c;
     --gray-color: #c1c1c1;
+    --red-color: #FE4A1C;
 }
 
-body {
+body, h3 {
     font-family: 'Roboto';
     margin: 0px;
     padding: 0px;
@@ -15,8 +16,9 @@ h1 {
     margin-bottom: 15px;
 }
 
-hr {
+hr, p, dl, dt, dd, button{
     margin: 0;
+    padding: 0;
 }
 
 button {
@@ -489,11 +491,12 @@ a {
     color: #666666;
 }
 
-/* 지역 추천 */
+/* 지역 설정*/
 .home__location {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-bottom: 1px solid var(--gray-color);
 }
 
 .home__locationBtn {
@@ -503,5 +506,98 @@ a {
 
 .home__location #locationTitle {
     font-size: 15px;
+    color: var(--black-color);
+}
+
+.popup_location {
+    display: none;
+}
+
+/* 품목 추천 */
+
+.home__recommendItems, .home__recommendMarket {
+    padding: 0px 16px 20px;
+    border-bottom: 1px solid #c1c1c1;
+}
+
+.title_area {
+    margin-bottom: 18px;
+}
+
+.recommendName {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.itemList {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.item img {
+    width: 130px;
+    height: 130px;
+}
+
+.item dl dt {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--black-color);
+}
+
+.item dl dd {
+    color: #666666;
+}
+
+.marketName {
+    color: #ff6f00;
+}
+
+.marketName, .item dl dd {
+    font-size: 12px;
+    margin: 0;
+}
+
+.itemPrice {
+    font-weight: 800;
+    color: var(--red-color);
+}
+
+.title_area p {
+    font-size: 12px;
+    color: var(--gray-color);
+}
+
+.item span.marketName, .item dl {
+    margin-bottom: 10px;
+}
+
+.itemBtn {
+    width: 100%;
+    height: 28px;
+    margin: 5px 0 0 0;
+    border: 1px solid var(--black-color);
+    background-color: var(--back-color);
+}
+
+/* 추천 매장 */
+.marketList {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+    overflow: hidden;
+}
+
+.marketList .market img {
+    width: 130px;
+    height: 130px;
+}
+
+.marketList .marketName {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 550;
     color: var(--black-color);
 }

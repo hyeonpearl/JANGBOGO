@@ -105,7 +105,11 @@ document.addEventListener('DOMContentLoaded', function(){
     banner.rollInit(4000); // 배너 롤링
 });
 
-function setGPS() {
-        
-}
+/* 추천 품목 마진 넣기 */ 
+function margin() {
+    var item = document.querySelectorAll('.item');
 
+    for (i = 1; i < item.length; i++) {
+        item[i].style.marginLeft = '20px';
+    }
+}
