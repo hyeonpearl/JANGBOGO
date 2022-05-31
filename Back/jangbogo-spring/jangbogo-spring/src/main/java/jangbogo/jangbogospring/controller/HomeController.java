@@ -7,9 +7,15 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class HomeController {
 
-    @GetMapping("/home")
+    @GetMapping("/")
     public String main()
     {
         return "home/home_index";
+    }
+
+    @GetMapping("/resister")
+    public String resister()
+    {
+        return "home/resister_index";
     }
 }
