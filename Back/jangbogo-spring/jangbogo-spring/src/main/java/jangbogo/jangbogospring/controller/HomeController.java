@@ -1,21 +1,21 @@
 package jangbogo.jangbogospring.controller;
 
+
+import jangbogo.jangbogospring.service.MemberService;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class HomeController {
 
     @GetMapping("/")
-    public String main()
+    public String home()
     {
         return "home/home_index";
     }
 
-    @GetMapping("/resister")
-    public String resister()
-    {
-        return "home/resister_index";
-    }
+
 }
