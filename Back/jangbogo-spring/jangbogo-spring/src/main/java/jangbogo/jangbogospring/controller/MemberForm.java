@@ -1,28 +1,35 @@
 package jangbogo.jangbogospring.controller;
 
-import javax.persistence.Column;
+import jangbogo.jangbogospring.domain.Member;
+import lombok.Builder;
 
 public class MemberForm {
     private Long id;
-
     private String name;
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    @Column(nullable = false)
     private String email;
-
-    @Column(nullable = false)
     private String password;
-
-    @Column(nullable = false)
     private String address;
-
-    @Column(nullable = false)
     private String tel;
+
+    public Member toEntity() {
+        Member build = Member.builder()
+                .id(id)
+                .email(email)
+                .password(password)
+                .name(name)
+                .address(address)
+                .tel(tel)
+                .build();
+        return build;
+    }
+
+    @Builder
+    public MemberForm(Long id, String name, String email, String password, String address, String tel) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.password = password;
+        this.address = address;
+        this.tel = tel;
+    }
 }

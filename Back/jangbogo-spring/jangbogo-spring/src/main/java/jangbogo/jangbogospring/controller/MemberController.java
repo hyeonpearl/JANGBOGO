@@ -23,12 +23,8 @@ public class MemberController {
 
     @PostMapping("/resister")
     public String create(MemberForm form){
-        Member member = new Member();
-        member.setName(form.getName());
 
-        System.out.println("member = " + member.getName());
-        memberService.join(member);
-
+        memberService.join(form.toEntity());
         return "redirect:/";
     }
 }
