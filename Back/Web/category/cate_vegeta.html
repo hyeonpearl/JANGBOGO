@@ -5,17 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="home_style.css">
+    <link rel="stylesheet" href="cate_style.css">
     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
-    
-    <script src="home_main.js"></script>
+
+    <script src="cate_main.js"></script>
     <script src="https://kit.fontawesome.com/bb430ea525.js" 
     crossorigin="anonymous"></script>
-    
 
-    <title>장보고 - 식자재 최저가 조회</title>
+    <title>장보고 - 채소 카테고리</title>
 </head>
-<body onload="margin()">
+<body>
     <nav class="navbar">
         <!-- 사이드 메뉴 -->
         <div class="navber__side">
@@ -98,7 +97,7 @@
         </div>
 
         <!-- 로고 -->
-        <a href="home_index.html" class="navbar__logo">JANGBOGO</a>
+        <a href="/home/home_index.html" class="navbar__logo">JANGBOGO</a>
         
         <!-- 로그인 -->
         <div class="navbar__sign">
@@ -168,148 +167,118 @@
         </div>
     </nav>
 
-    <main class="home__board">
-        <!-- 배너 -->
-        <section class="home__banner">
-            <ul class="home__banner_list">
-                <li class="currentroll">
-                    <img src="/File/banner/banner_1.png">
-                </li>
-                <li class="nextroll">
-                    <img src="/File/banner/banner_1.png">
-                </li>
-                <li class="prevroll">
-                    <img src="/File/banner/banner_1.png">
-                </li>
-            </ul>
-        </section>
-
-        <!-- 카테고리 -->
-        <section class="home__categoryBoard">
-            <div class="blank"></div>
-            <div class="home__category">
-                <a href="/category/cate_meat.html" class="home__category_meat">
-                    <img src="/File/category/meat.png">
-                    <div>축산물</div>
-                </a>
-                
-                <a href="/category/cate_sea.html" class="home__category_seafood">
-                    <img src="/File/category/seafood.png">
-                    <div>해산물</div>
-                </a>
-
-                <a href="/category/cate_fruit.html" class="home__category_fruit">
-                    <img src="/File/category/fruits.png">
-                    <div>과일</div>
-                </a>
-
-                <a href="/category/cate_vegeta.html" class="home__category_vegeter">
-                    <img src="/File/category/vegetable.png">
-                    <div>채소</div>
-                </a>
-            </div>
-        </section>
-
-        <!-- 추천 상품 -->
-        <section class="home__recommendBoard">
-            <div class="home__location">
-                <button class="home__locationBtn" onclick="setGPS()">
-                    <span>
-                        <strong id="locationTitle">서울시 중랑구 ></strong>
-                    </span>
-                </button>
-            </div>
-            <div class="home__recommendItems">
-                <div class="title_area">
-                    <h3 class="recommendName">이 지역의 품목 별 최저가 상품!</h3>
-                    <p>ⓘ 매주 금요일 업데이트</p>
-                </div>
-                <div class="itemList">
-                    <div class="item">
-                        <a href="#">
-                            <img src="/File/items/apple.png" alt="apple">
-                            <span class="marketName">동원시장</span>
-                            <dl>
-                                <dt>사과(부사, 300g)</dt>
-                                <dd>300g / 1개</dd>
-                            </dl>
-                            <div class="price_area">
-                                <span class="itemPrice">2,225원</span>
-                            </div>
-                        </a>
-                        <button class="itemBtn">찜 목록에 추가</button>
-                    </div>
-                    <div class="item">
-                        <a href="#">
-                            <img src="/File/items/pork.png" alt="pork">
-                            <span class="marketName">홈플러스 면목점</span>
-                            <dl>
-                                <dt>돼지고기(생삼겹살)</dt>
-                                <dd>100g</dd>
-                            </dl>
-                            <div class="price_area">
-                                <span class="itemPrice">2,100원</span>
-                            </div>
-                        </a>
-                        <button class="itemBtn">찜 목록에 추가</button>
-                    </div>
-                    <div class="item">
-                        <a href="#">
-                            <img src="/File/items/godeung.png" alt="godeung">
-                            <span class="marketName">이마트 상봉점</span>
-                            <dl>
-                                <dt>고등어</dt>
-                                <dd>30cm / 1마리</dd>
-                            </dl>
-                            <div class="price_area">
-                                <span class="itemPrice">3,000원</span>
-                            </div>
-                        </a>
-                        <button class="itemBtn">찜 목록에 추가</button>
-                    </div>
-                    <div class="item">
-                        <a href="#">
-                            <img src="/File/items/onion.png" alt="onion">
-                            <span class="marketName">동원시장</span>
-                            <dl>
-                                <dt>양파(1.5kg)</dt>
-                                <dd>1.5kg / 1망</dd>
-                            </dl>
-                            <div class="price_area">
-                                <span class="itemPrice">3,317원</span>
-                            </div>
-                        </a>
-                        <button class="itemBtn">찜 목록에 추가</button>
+    <main class="cate__board">
+        <!-- 정렬 -->
+        <div class="line__top">
+            <p class="cate_title">채소</p>
+            <div class="sort_area">
+                <div class="dropdown">
+                    <button class="jsFilterOpen">
+                        <a href="#">찜 많은 순</a>
+                    </button>
+                    <div class="dropdown-cont">
+                        <ul>
+                            <li class="jsFilter on" data-option="favorit">
+                                <a href="#">찜 많은 순</a>
+                            </li>
+                            <li class="jsFilter" data-option="low_price">
+                                <a href="#">낮은 가격순</a>
+                            </li>
+                            <li class="jsFilter" data-option="high_price">
+                                <a href="#">높은 가격순</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
-
-            <!-- 추천 매장 -->
-            <div class="home__recommendMarket">
-                <h3 class="recommendName">이 지역의 추천 매장!</h3>
-                <div class="marketList">
-                    <div class="market">
-                        <a href="#">
-                            <img src="/File/market/emart.png" alt="emart">
-                            <div class="marketName">이마트 상봉점</div>
-                        </a>
+        </div>
+        
+        <div class="cate_itemlist">
+            <div class="item">
+                <a href="#">
+                    <img src="/File/items/onion.png" alt="onion">
+                    <span class="marketName">동원시장</span>
+                    <dl>
+                        <dt>양파(1.5kg)</dt>
+                        <dd>1.5kg / 1망</dd>
+                    </dl>
+                    <div class="price_area">
+                        <span class="itemPrice">3,317원</span>
                     </div>
-                    <div class="market">
-                        <a href="#">
-                            <img src="/File/market/tradition.png" alt="traditionMarket">
-                            <div class="marketName">동원시장</div>
-                        </a>
-                    </div>
-                    <div class="market">
-                        <a href="#">
-                            <img src="/File/market/homeplus.png" alt="homeplus">
-                            <div class="marketName">홈플러스 면목점</div>
-                        </a>
-                    </div>
-                </div>
+                </a>
+                <button class="itemBtn">찜 목록에 추가</button>
             </div>
-        </section>
+            <div class="item">
+                <a href="#">
+                    <img src="/File/items/onion.png" alt="onion">
+                    <span class="marketName">동원시장</span>
+                    <dl>
+                        <dt>양파(1.5kg)</dt>
+                        <dd>1.5kg / 1망</dd>
+                    </dl>
+                    <div class="price_area">
+                        <span class="itemPrice">3,317원</span>
+                    </div>
+                </a>
+                <button class="itemBtn">찜 목록에 추가</button>
+            </div>
+            <div class="item">
+                <a href="#">
+                    <img src="/File/items/onion.png" alt="onion">
+                    <span class="marketName">동원시장</span>
+                    <dl>
+                        <dt>양파(1.5kg)</dt>
+                        <dd>1.5kg / 1망</dd>
+                    </dl>
+                    <div class="price_area">
+                        <span class="itemPrice">3,317원</span>
+                    </div>
+                </a>
+                <button class="itemBtn">찜 목록에 추가</button>
+            </div>
+            <div class="item">
+                <a href="#">
+                    <img src="/File/items/onion.png" alt="onion">
+                    <span class="marketName">동원시장</span>
+                    <dl>
+                        <dt>양파(1.5kg)</dt>
+                        <dd>1.5kg / 1망</dd>
+                    </dl>
+                    <div class="price_area">
+                        <span class="itemPrice">3,317원</span>
+                    </div>
+                </a>
+                <button class="itemBtn">찜 목록에 추가</button>
+            </div>
+            <div class="item">
+                <a href="#">
+                    <img src="/File/items/onion.png" alt="onion">
+                    <span class="marketName">동원시장</span>
+                    <dl>
+                        <dt>양파(1.5kg)</dt>
+                        <dd>1.5kg / 1망</dd>
+                    </dl>
+                    <div class="price_area">
+                        <span class="itemPrice">3,317원</span>
+                    </div>
+                </a>
+                <button class="itemBtn">찜 목록에 추가</button>
+            </div>
+            <div class="item">
+                <a href="#">
+                    <img src="/File/items/onion.png" alt="onion">
+                    <span class="marketName">동원시장</span>
+                    <dl>
+                        <dt>양파(1.5kg)</dt>
+                        <dd>1.5kg / 1망</dd>
+                    </dl>
+                    <div class="price_area">
+                        <span class="itemPrice">3,317원</span>
+                    </div>
+                </a>
+                <button class="itemBtn">찜 목록에 추가</button>
+            </div>
+        </div>
     </main>
 </body>
 </html>
-

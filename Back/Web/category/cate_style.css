@@ -60,7 +60,6 @@ a {
 }
 
 
-
 /* nav 사이드 메뉴 */
 #navbar__sidebtn {
     display: none;
@@ -260,7 +259,7 @@ a {
     display: block;
     width: 24px;
     height: 24px;
-    position: relative;
+    position: sticky;
     cursor: pointer;
     z-index: 5;
 }
@@ -422,129 +421,62 @@ a {
     padding: 16px 24px;
 }
 
-/* 메인 화면 */
-.home__banner {
-    width: 100%;
-    height: 260px;
-    position: absolute;
-    overflow: hidden;
-}
-
-.home__banner_list li {
-    position: absolute;
-    width: 100%;
-    height: 260px;
-    left: 100%;
-}
-
-.home__banner_list li img {
-    width: 100%; 
-    height: 100%;
-}
-
-.home__banner_list li.currentroll {
-    left: 0;
-    transition: left .5s ease-in-out, right .5s ease-in-out;
-}
-
-.home__banner_list li.prevroll {
-    left: -100%;
-    transition: left .5s ease-in-out, right .5s ease-in-out;
-}
-
-.home__banner_list.reverse li.prevroll {
-    transition: none;
-}
-
-.home__banner_list li.nextroll {
-    left: 100%;
-    display: block;
-    transition: none;
-}
-.home__banner_list.reverse li.nextroll {
-    transition: left .5s ease-in-out, right .5s ease-in-out;
-}
-
-.blank {
-    width: 100%;
-    height: 260px;
-}
-
-.home__category {
+/* 정렬 */
+.line__top {
+    margin: 0.5rem 0 1rem 0;
+    padding: 0 0 0 1rem;
     display: flex;
-    justify-content: space-around;
-    text-align: center;
+    justify-content:space-between;
     align-items: center;
-    padding: 6px;
-    border-top: 1px solid #c1c1c1;
-    border-bottom: 1px solid #c1c1c1;
 }
 
-.home__category a {
-    width: 80px;
-    height: 60px;
+.cate_title {
+    font-size: 1.5rem;
+    font-weight: 550;
 }
 
-.home__category img {
-    width: 32px;
-    height: auto;
-}
-
-.home__category div {
-    margin-top: 4px;
-    font-size: 12px;
-    color: #666666;
-}
-
-/* 지역 설정*/
-.home__location {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 1px solid var(--gray-color);
-}
-
-.home__locationBtn {
-    padding: 13px 50px;
+.line__top .jsFilterOpen {
+    font-size: 1rem;
     background-color: var(--back-color);
 }
 
-.home__location #locationTitle {
-    font-size: 15px;
-    color: var(--black-color);
-}
-
-.popup_location {
+.dropdown-cont {
     display: none;
 }
 
-/* 품목 추천 */
-.home__recommendItems, .home__recommendMarket {
-    padding: 0px 16px 20px;
-    border-bottom: 1px solid #c1c1c1;
+/* 품목 리스트 */
+.cate__board {
+    padding: 1rem 1rem 1rem 0;
 }
 
-.title_area {
-    margin-bottom: 18px;
+.cate_itemlist .item {
+    width: 45%;
+    margin: 0 0 1rem 1rem;
+    display: inline-block;
+    text-align: center;
 }
 
-.recommendName {
-    margin-top: 10px;
+.cate_itemlist .item img {
+    margin-bottom: 1rem;
+    width: 165px;
+    height: 165px;
 }
 
-.itemList {
-    display: flex;
-    align-items: center;
-    overflow: hidden;
+.item .itemBtn {
+    width: 100%;
+    height: 28px;
+    margin: 5px 0 0 0;
+    border: 1px solid var(--black-color);
+    background-color: var(--back-color);
 }
 
-.item img {
-    width: 130px;
-    height: 130px;
+.item .marketName {
+    font-size: 12px;
+    color: var(--orange-color);
 }
 
 .item dl dt {
-    font-size: 14px;
+    font-size: 1.15rem;
     font-weight: 600;
     color: var(--black-color);
 }
@@ -553,66 +485,8 @@ a {
     color: #666666;
 }
 
-.marketName {
-    color: #ff6f00;
-}
-
-.marketName, .item dl dd {
-    font-size: 12px;
-    margin: 0;
-}
-
-.itemPrice {
-    font-weight: 800;
+.item .itemPrice {
     color: var(--red-color);
-}
-
-.title_area p {
-    font-size: 12px;
-    color: var(--gray-color);
-}
-
-.item span.marketName, .item dl {
-    margin-bottom: 10px;
-}
-
-.itemBtn {
-    width: 100%;
-    height: 28px;
-    margin: 5px 0 0 0;
-    border: 1px solid var(--black-color);
-    background-color: var(--back-color);
-}
-
-/* 추천 매장 */
-.home__recommendMarket {
-    padding: 0 1rem 1rem 0;
-}
-
-.home__recommendMarket .recommendName {
-    margin-left: 1rem;
-}
-
-.marketList {
-    display: flex;
-    align-items: center;
-    margin-top: 8px;
-    overflow: hidden;
-}
-
-.marketList .market {
-    margin-left: 1rem;
-}
-
-.marketList .market img {
-    width: 130px;
-    height: 130px;
-}
-
-.marketList .marketName {
-    margin-top: 5px;
-    text-align: center;
-    font-size: 14px;
-    font-weight: 550;
-    color: var(--black-color);
+    font-weight: 800;
+    font-size: 1.15rem;
 }
