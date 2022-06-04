@@ -5,55 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="home_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    
+    <script src="home_main.js"></script>
     <script src="https://kit.fontawesome.com/bb430ea525.js" 
     crossorigin="anonymous"></script>
-    <script src="home_main.js"></script>
+    
 
     <title>장보고 - 식자재 최저가 조회</title>
 </head>
-
 <body onload="margin()">
-    <div class="popup_location">
-        <div class="popup_wrap">
-            <p>찾아보고 싶은 지역을 선택해주세요!</p>
-            <dt>서울시</dt>
-            <ul>
-                <li><a href="#">강남구</a></li>
-                <li><a href="#">강동구</a></li>
-                <li><a href="#">강북구</a></li>
-                <li><a href="#">강서구</a></li>
-                <li><a href="#">관악구</a></li>
-                <li><a href="#">광진구</a></li>
-                <li><a href="#">구로구</a></li>
-                <li><a href="#">금천구</a></li>
-                <li><a href="#">노원구</a></li>
-                <li><a href="#">도봉구</a></li>
-                <li><a href="#">동대문구</a></li>
-                <li><a href="#">동작구</a></li>
-                <li><a href="#">마포구</a></li>
-                <li><a href="#">서대문구</a></li>
-                <li><a href="#">서초구</a></li>
-                <li><a href="#">성동구</a></li>
-                <li><a href="#">성북구</a></li>
-                <li><a href="#">송파구</a></li>
-                <li><a href="#">양천구</a></li>
-                <li><a href="#">영등포구</a></li>
-                <li><a href="#">용산구</a></li>
-                <li><a href="#">은평구</a></li>
-                <li><a href="#">종로구</a></li>
-                <li><a href="#">중구</a></li>
-                <li><a href="#">중랑구</a></li>
-            </ul>
-        </div>
-
-            <div class="btn_wrap">
-                <button class="btn_close">확인</button>
-            </div>
-        </div>
-    </div>
-
     <nav class="navbar">
         <!-- 사이드 메뉴 -->
         <div class="navber__side">
@@ -70,25 +32,25 @@
                     <!-- 메뉴 카테고리 -->
                     <div class="category">
                         <div class="category__meet">
-                            <a href="#">
+                            <a href="/category/cate_meat.html">
                                 <span>축산물</span>  
                                 <i class="fa-solid fa-angle-right"></i>
                             </a>
                         </div>
                         <div class="category__seafood">
-                            <a href="#">
+                            <a href="/category/cate_sea.html">
                                 <span>해산물</span>  
                                 <i class="fa-solid fa-angle-right"></i>
                             </a>
                         </div>
                         <div class="category__fruit">
-                            <a href="#">
+                            <a href="/category/cate_fruit.html">
                                 <span>과일</span>  
                                 <i class="fa-solid fa-angle-right"></i>
                             </a>
                         </div>
                         <div class="category__vegetable">
-                            <a href="#">
+                            <a href="/category/cate_vegeta.html">
                                 <span>채소</span>  
                                 <i class="fa-solid fa-angle-right"></i>
                             </a>
@@ -122,14 +84,16 @@
             </label>
             <!-- 검색 버튼 클릭 시 화면 -->
             <div class="navbar__searchbar">
-                <nav></nav>
-                <div class="search__content">
-                    <label for="navbar__search_input">
-                        <i class="fa-brands fa-sistrix"></i>
-                    </label>
-                    <input type="text" id="navbar__search_input" 
-                    placeholder="장보고에서 '최저가'를 찾아드려요!">
-                </div>
+                <form action="">
+                    <nav></nav>
+                    <div class="search__content">
+                        <label for="navbar__search_input">
+                            <i class="fa-brands fa-sistrix"></i>
+                        </label>
+                        <input type="text" id="navbar__search_input" 
+                        placeholder="장보고에서 '최저가'를 찾아드려요!">
+                    </div>
+                </form>
             </div>
         </div>
 
@@ -197,7 +161,7 @@
                     <section class="login__resister">
                         <div class="login__resister_title">새로 오셨나요?</div>
                         <p>개인 계정을 생성하시면 다양한 기능을 사용하실 수 있습니다.</p>
-                        <a href="/Back/Web/resister/resister_index.html">새로운 계정 만들기</a>
+                        <a href="/resister/resister_index.html">새로운 계정 만들기</a>
                     </section>
                 </div>
             </div>
@@ -209,13 +173,13 @@
         <section class="home__banner">
             <ul class="home__banner_list">
                 <li class="currentroll">
-                    <img src="/Back/Web/File/banner/banner_1.png">
+                    <img src="/File/banner/banner_1.png">
                 </li>
                 <li class="nextroll">
-                    <img src="/Back/Web/File/banner/banner_1.png">
+                    <img src="/File/banner/banner_1.png">
                 </li>
                 <li class="prevroll">
-                    <img src="/Back/Web/File/banner/banner_1.png">
+                    <img src="/File/banner/banner_1.png">
                 </li>
             </ul>
         </section>
@@ -224,23 +188,23 @@
         <section class="home__categoryBoard">
             <div class="blank"></div>
             <div class="home__category">
-                <a href="#" class="home__category_meat">
-                    <img src="/Back/Web/File/category/meat.png">
+                <a href="/category/cate_meat.html" class="home__category_meat">
+                    <img src="/File/category/meat.png">
                     <div>축산물</div>
                 </a>
                 
-                <a href="#" class="home__category_seafood">
-                    <img src="/Back/Web/File/category/seafood.png">
+                <a href="/category/cate_sea.html" class="home__category_seafood">
+                    <img src="/File/category/seafood.png">
                     <div>해산물</div>
                 </a>
 
-                <a href="#" class="home__category_fruit">
-                    <img src="/Back/Web/File/category/fruits.png">
+                <a href="/category/cate_fruit.html" class="home__category_fruit">
+                    <img src="/File/category/fruits.png">
                     <div>과일</div>
                 </a>
 
-                <a href="#" class="home__category_vegeter">
-                    <img src="/Back/Web/File/category/vegetable.png">
+                <a href="/category/cate_vegeta.html" class="home__category_vegeter">
+                    <img src="/File/category/vegetable.png">
                     <div>채소</div>
                 </a>
             </div>
@@ -257,13 +221,13 @@
             </div>
             <div class="home__recommendItems">
                 <div class="title_area">
-                    <h3 class="recommendName">개발자 Pick 추천 상품!</h3>
+                    <h3 class="recommendName">이 지역의 품목 별 최저가 상품!</h3>
                     <p>ⓘ 매주 금요일 업데이트</p>
                 </div>
                 <div class="itemList">
                     <div class="item">
                         <a href="#">
-                            <img src="/Back/Web/File/items/apple.png" alt="apple">
+                            <img src="/File/items/apple.png" alt="apple">
                             <span class="marketName">동원시장</span>
                             <dl>
                                 <dt>사과(부사, 300g)</dt>
@@ -277,7 +241,7 @@
                     </div>
                     <div class="item">
                         <a href="#">
-                            <img src="/Back/Web/File/items/pork.png" alt="pork">
+                            <img src="/File/items/pork.png" alt="pork">
                             <span class="marketName">홈플러스 면목점</span>
                             <dl>
                                 <dt>돼지고기(생삼겹살)</dt>
@@ -291,7 +255,7 @@
                     </div>
                     <div class="item">
                         <a href="#">
-                            <img src="/Back/Web/File/items/godeung.png" alt="godeung">
+                            <img src="/File/items/godeung.png" alt="godeung">
                             <span class="marketName">이마트 상봉점</span>
                             <dl>
                                 <dt>고등어</dt>
@@ -305,7 +269,7 @@
                     </div>
                     <div class="item">
                         <a href="#">
-                            <img src="/Back/Web/File/items/onion.png" alt="onion">
+                            <img src="/File/items/onion.png" alt="onion">
                             <span class="marketName">동원시장</span>
                             <dl>
                                 <dt>양파(1.5kg)</dt>
@@ -326,19 +290,19 @@
                 <div class="marketList">
                     <div class="market">
                         <a href="#">
-                            <img src="/Back/Web/File/market/emart.png" alt="emart">
+                            <img src="/File/market/emart.png" alt="emart">
                             <div class="marketName">이마트 상봉점</div>
                         </a>
                     </div>
                     <div class="market">
                         <a href="#">
-                            <img src="/Back/Web/File/market/tradition.png" alt="traditionMarket">
+                            <img src="/File/market/tradition.png" alt="traditionMarket">
                             <div class="marketName">동원시장</div>
                         </a>
                     </div>
                     <div class="market">
                         <a href="#">
-                            <img src="/Back/Web/File/market/homeplus.png" alt="homeplus">
+                            <img src="/File/market/homeplus.png" alt="homeplus">
                             <div class="marketName">홈플러스 면목점</div>
                         </a>
                     </div>
