@@ -17,7 +17,7 @@ function backLogin() {
 function menuOn() {
     var sidebtn = document.getElementById("navbar__sidebtn");
     var searbtn = document.getElementById("navbar__searchbtn");
-    var backgro = document.getElementsByClassName('home__board')[0];
+    var backgro = document.getElementsByClassName('item__board')[0];
 
     searbtn.checked = false;
 
@@ -27,7 +27,7 @@ function menuOn() {
 function searchOn() {
     var sidebtn = document.getElementById("navbar__sidebtn");
     var searbtn = document.getElementById("navbar__searchbtn");
-    var backgro = document.getElementsByClassName('cate__board')[0];
+    var backgro = document.getElementsByClassName('item__board')[0];
 
     sidebtn.checked = false;
 

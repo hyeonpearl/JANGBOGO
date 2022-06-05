@@ -340,22 +340,22 @@ a {
     font-size: 14px;
 }
 
-.login__resister .login__resister_title {
+.login__register .login__register_title {
     padding: 20px 0px;
     font-size: 17px;
     font-weight: 800;
 }
 
-.login__resister {
+.login__register {
     font-size: 16px;
 }
 
-.login__resister p {
+.login__register p {
     margin: 0;
     font-size: 12px;
 }
 
-.login__resister a {
+.login__register a {
     height: 48px;
     display: flex;
     justify-content: center;
@@ -445,7 +445,7 @@ a {
 }
 
 /* 품목 리스트 */
-.cate__board {
+.item__board {
     padding: 1rem 1rem 1rem 0;
 }
 
