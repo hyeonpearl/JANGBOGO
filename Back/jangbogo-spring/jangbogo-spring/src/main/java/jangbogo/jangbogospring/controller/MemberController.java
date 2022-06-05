@@ -15,12 +15,12 @@ public class MemberController {
         this.memberService = memberService;
     }
 
-    @GetMapping("/resister")
+    @GetMapping("/register")
     public String createForm(){
-        return "home/resister_index";
+        return "register/register_index";
     }
 
-    @PostMapping("/resister")
+    @PostMapping("/register")
     public String create(MemberDto memberDto){
 
         memberService.join(memberDto.toEntity());
