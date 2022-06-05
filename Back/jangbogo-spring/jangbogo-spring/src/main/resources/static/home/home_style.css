@@ -4,10 +4,11 @@
     --black-color: #2c2c2c;
     --gray-color: #c1c1c1;
     --red-color: #FE4A1C;
+    --orange-color: #ff6f00;
 }
 
 body, h3 {
-    font-family: 'Roboto';
+    font-family: 'Do Hyeon', sans-serif;
     margin: 0px;
     padding: 0px;
 }
@@ -16,7 +17,7 @@ h1 {
     margin-bottom: 15px;
 }
 
-hr, p, dl, dt, dd, button{
+hr, p, dl, dt, dd, button {
     margin: 0;
     padding: 0;
 }
@@ -43,6 +44,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
     background-color: var(--back-color);
     padding: 12px 24px;
     border-bottom: 1px solid #c1c1c1;
@@ -50,10 +52,13 @@ a {
 }
 
 .navbar__logo {
+    position: relative;
+    right: 12%;
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 700;
     z-index: 3;
 }
+
 
 
 /* nav 사이드 메뉴 */
@@ -172,9 +177,8 @@ a {
 
 /* nav 검색 */
 .navbar__search {
-    position: absolute;
-    left: 65px;
-    top: 15px;;
+    position: relative;
+    right: 12%;
 }
 
 #navbar__searchbtn {
@@ -184,13 +188,14 @@ a {
 #navbar__searchbtn + label {
     display: block;
     width: 24px;
-    height: 20px;
+    height: 24px;
     position: relative;
     cursor: pointer;
     z-index: 2;
 }
 
 #navbar__searchbtn + label i {
+    text-align: center;
     font-size: 24px;
     font-weight: 800;
 }
@@ -514,7 +519,6 @@ a {
 }
 
 /* 품목 추천 */
-
 .home__recommendItems, .home__recommendMarket {
     padding: 0px 16px 20px;
     border-bottom: 1px solid #c1c1c1;
@@ -526,7 +530,6 @@ a {
 
 .recommendName {
     margin-top: 10px;
-    margin-bottom: 10px;
 }
 
 .itemList {
@@ -582,11 +585,23 @@ a {
 }
 
 /* 추천 매장 */
+.home__recommendMarket {
+    padding: 0 1rem 1rem 0;
+}
+
+.home__recommendMarket .recommendName {
+    margin-left: 1rem;
+}
+
 .marketList {
     display: flex;
     align-items: center;
     margin-top: 8px;
     overflow: hidden;
+}
+
+.marketList .market {
+    margin-left: 1rem;
 }
 
 .marketList .market img {
@@ -595,7 +610,7 @@ a {
 }
 
 .marketList .marketName {
-    margin-top: 10px;
+    margin-top: 5px;
     text-align: center;
     font-size: 14px;
     font-weight: 550;

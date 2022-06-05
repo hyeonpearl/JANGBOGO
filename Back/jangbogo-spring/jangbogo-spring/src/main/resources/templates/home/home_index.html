@@ -6,56 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="home/home_style.css">
 
     <script src="https://kit.fontawesome.com/bb430ea525.js"
             crossorigin="anonymous"></script>
-    <script src="home/home_main.js"></script>
+    <script defer src="home/home_main.js"></script>
 
     <title>장보고 - 식자재 최저가 조회</title>
 </head>
 
 <body onload="margin()">
-<div class="popup_location">
-    <div class="popup_wrap">
-        <p>찾아보고 싶은 지역을 선택해주세요!</p>
-        <dt>서울시</dt>
-        <ul>
-            <li><a href="#">강남구</a></li>
-            <li><a href="#">강동구</a></li>
-            <li><a href="#">강북구</a></li>
-            <li><a href="#">강서구</a></li>
-            <li><a href="#">관악구</a></li>
-            <li><a href="#">광진구</a></li>
-            <li><a href="#">구로구</a></li>
-            <li><a href="#">금천구</a></li>
-            <li><a href="#">노원구</a></li>
-            <li><a href="#">도봉구</a></li>
-            <li><a href="#">동대문구</a></li>
-            <li><a href="#">동작구</a></li>
-            <li><a href="#">마포구</a></li>
-            <li><a href="#">서대문구</a></li>
-            <li><a href="#">서초구</a></li>
-            <li><a href="#">성동구</a></li>
-            <li><a href="#">성북구</a></li>
-            <li><a href="#">송파구</a></li>
-            <li><a href="#">양천구</a></li>
-            <li><a href="#">영등포구</a></li>
-            <li><a href="#">용산구</a></li>
-            <li><a href="#">은평구</a></li>
-            <li><a href="#">종로구</a></li>
-            <li><a href="#">중구</a></li>
-            <li><a href="#">중랑구</a></li>
-        </ul>
-    </div>
-
-    <div class="btn_wrap">
-        <button class="btn_close">확인</button>
-    </div>
-</div>
-</div>
-
 <nav class="navbar">
     <!-- 사이드 메뉴 -->
     <div class="navber__side">
@@ -72,26 +33,26 @@
                 <!-- 메뉴 카테고리 -->
                 <div class="category">
                     <div class="category__meet">
-                        <a href="#">
-                            <span>축산물</span>
+                        <a href="/category/cate_meat.html">
+                            <span>축산물</span>  
                             <i class="fa-solid fa-angle-right"></i>
                         </a>
                     </div>
                     <div class="category__seafood">
-                        <a href="#">
-                            <span>해산물</span>
+                        <a href="/category/cate_sea.html">
+                            <span>해산물</span>  
                             <i class="fa-solid fa-angle-right"></i>
                         </a>
                     </div>
                     <div class="category__fruit">
-                        <a href="#">
-                            <span>과일</span>
+                        <a href="/category/cate_fruit.html">
+                            <span>과일</span>  
                             <i class="fa-solid fa-angle-right"></i>
                         </a>
                     </div>
                     <div class="category__vegetable">
-                        <a href="#">
-                            <span>채소</span>
+                        <a href="/category/cate_vegeta.html">
+                            <span>채소</span>  
                             <i class="fa-solid fa-angle-right"></i>
                         </a>
                     </div>
@@ -124,14 +85,16 @@
         </label>
         <!-- 검색 버튼 클릭 시 화면 -->
         <div class="navbar__searchbar">
-            <nav></nav>
-            <div class="search__content">
-                <label for="navbar__search_input">
-                    <i class="fa-brands fa-sistrix"></i>
-                </label>
-                <input type="text" id="navbar__search_input"
-                       placeholder="장보고에서 '최저가'를 찾아드려요!">
-            </div>
+            <form>
+                <nav></nav>
+                <div class="search__content">
+                    <label for="navbar__search_input">
+                        <i class="fa-brands fa-sistrix"></i>
+                    </label>
+                    <input type="text" id="navbar__search_input"
+                        placeholder="장보고에서 '최저가'를 찾아드려요!">
+                </div>
+            </form>
         </div>
     </div>
 
@@ -161,13 +124,13 @@
                         <div class="login__email_board">
                             <label for="login__email">이메일*</label><br>
                             <input type="email" id="login__email" dir="auto"
-                                   required aria-invalid="false" placeholder="name@example.com"><br>
+                                    required aria-invalid="false" placeholder="name@example.com"><br>
                         </div>
 
                         <div class="login__password_board">
                             <label for="login__password">비밀번호*</label><br>
                             <input type="password" id="login__password" dir="auto"
-                                   required aria-invalid="false"><br>
+                                    required aria-invalid="false"><br>
                             <button type="button" class="login__form_findPass" onclick="findPass()">
                                 비밀번호를 잊어버리셨나요?
                             </button>
@@ -185,7 +148,7 @@
                         <div class="findpass__email_board">
                             <label for="findpass__email">이메일*</label><br>
                             <input type="email" id="findpass__email" dir="auto"
-                                   required aria-invalid="false" placeholder="name@example.com"><br>
+                                    required aria-invalid="false" placeholder="name@example.com"><br>
                         </div>
 
                         <div class="findpass__btn">
@@ -226,21 +189,21 @@
     <section class="home__categoryBoard">
         <div class="blank"></div>
         <div class="home__category">
-            <a href="#" class="home__category_meat">
+            <a href="/category/cate_meat.html" class="home__category_meat">
                 <img src="File/category/meat.png">
                 <div>축산물</div>
             </a>
 
-            <a href="#" class="home__category_seafood">
+            <a href="/category/cate_seafood.html" class="home__category_seafood">
                 <img src="File/category/seafood.png">
                 <div>해산물</div>
             </a>
-                <a href="#" class="home__category_fruit">
+                <a href="/category/cate_fruit.html" class="home__category_fruit">
                     <img src="File/category/fruits.png">
                     <div>과일</div>
                 </a>
 
-                <a href="#" class="home__category_vegeter">
+                <a href="/category/cate_vegeta.html" class="home__category_vegeter">
                     <img src="File/category/vegetable.png">
                     <div>채소</div>
                 </a>
@@ -333,7 +296,7 @@
                 </div>
                 <div class="market">
                     <a href="#">
-                        <img src="File/market/tradition.png" alt="traditionMarket">
+                        <img src="File/market/tradition.jpg" alt="traditionMarket">
                         <div class="marketName">동원시장</div>
                     </a>
                 </div>
