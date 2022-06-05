@@ -1,6 +1,5 @@
 package jangbogo.jangbogospring.controller;
 
-import jangbogo.jangbogospring.domain.Member;
 import jangbogo.jangbogospring.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -22,9 +21,10 @@ public class MemberController {
     }
 
     @PostMapping("/resister")
-    public String create(MemberForm form){
+    public String create(MemberDto memberDto){
 
-        memberService.join(form.toEntity());
+        memberService.join(memberDto.toEntity());
+        //존재하는 이메일이면
         return "redirect:/";
     }
 }

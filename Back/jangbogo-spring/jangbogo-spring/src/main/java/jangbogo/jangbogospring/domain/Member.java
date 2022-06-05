@@ -30,17 +30,13 @@ public class Member {
         this.id = id;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
     private String email;
 
     private String password;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     private String name;
 

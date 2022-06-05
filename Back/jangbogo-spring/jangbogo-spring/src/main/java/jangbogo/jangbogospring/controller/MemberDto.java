@@ -3,7 +3,7 @@ package jangbogo.jangbogospring.controller;
 import jangbogo.jangbogospring.domain.Member;
 import lombok.Builder;
 
-public class MemberForm {
+public class MemberDto {
     private Long id;
     private String name;
     private String email;
@@ -24,7 +24,7 @@ public class MemberForm {
     }
 
     @Builder
-    public MemberForm(Long id, String name, String email, String password, String address, String tel) {
+    public MemberDto(Long id, String name, String email, String password, String address, String tel) {
         this.id = id;
         this.name = name;
         this.email = email;

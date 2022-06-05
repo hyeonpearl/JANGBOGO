@@ -22,7 +22,7 @@ public class MemberService {
     //회원가입
     public Long join(Member member)
     {
-        memberRepository.findByName(member.getName())
+        memberRepository.findByEmail(member.getEmail())
                         .ifPresent(member1 -> {
                             throw new IllegalStateException("이미 존재하는 회원입니다.");
                         });
