@@ -60,7 +60,7 @@
                     <!-- 메뉴 사용자 콘텐츠 -->
                     <div class="sidebar__account_content">
                         <div class="sidebar__mypage">
-                            <a href="#">
+                            <a href="/mypage/mypage_index.html">
                                 <i class="fa-regular fa-user"></i>
                                 <span>마이페이지</span>
                             </a>
@@ -99,74 +99,15 @@
 
         <!-- 로고 -->
         <a href="/home/home_index.html" class="navbar__logo">JANGBOGO</a>
-        
+
         <!-- 로그인 -->
         <div class="navbar__sign">
-            <input type="checkbox" id="navbar__signbtn">
             <label for="navbar__signbtn">
-                <i id="cheOff" class="fa-solid fa-arrow-right-to-bracket" onclick="checkOn()"></i>
-                <i id="cheOn" class="fa-solid fa-x" onclick="checkOff()"></i>
+                <a href="/login/login_index.html"><i id="goLogin" class="fa-solid fa-arrow-right-to-bracket"></i></a>
             </label>
-
-            <!-- 로그인 버튼 클릭 시 화면-->
-            <div class="navbar__signbar">
-                <h1 class="login__header_title">
-                    <span>개인정보</span>
-                </h1>
-                <hr>
-                
-                <div class="login__content">
-                    <!-- 로그인 -->
-                    <section class="login__form">
-                        <form>
-                            <div class="login__form_title">로그인</div>
-                            <div class="login__email_board">   
-                                <label for="login__email">이메일*</label><br>
-                                <input type="email" id="login__email" dir="auto"
-                                required aria-invalid="false" placeholder="name@example.com"><br>
-                            </div>
-
-                            <div class="login__password_board">
-                                <label for="login__password">비밀번호*</label><br>
-                                <input type="password" id="login__password" dir="auto" 
-                                required aria-invalid="false"><br>
-                                <button type="button" class="login__form_findPass" onclick="findPass()">
-                                    비밀번호를 잊어버리셨나요?
-                                </button>
-                            </div>
-
-                            <button type="submit" class="login__form_loginBtn">로그인</button>
-                        </form>
-                    </section>
-
-                    <!-- 비밀번호 찾기 -->
-                    <section class="login__findpass">
-                        <h1 class="findpass_title">비밀번호 찾기</h1>
-                        <p>이메일로 새로운 비밀번호를 받으시려면 아래에 이메일 주소를 입력해주세요.</p>
-                        <form action="">
-                            <div class="findpass__email_board">   
-                                <label for="findpass__email">이메일*</label><br>
-                                <input type="email" id="findpass__email" dir="auto"
-                                required aria-invalid="false" placeholder="name@example.com"><br>
-                            </div>
-
-                            <div class="findpass__btn">
-                                <button type="submit" class="findpass_ok">전송</button>
-                                <button type="button" class="findpass_cancle" onclick="backLogin()">취소</button>
-                            </div>
-                        </form>
-                    </section>
-
-                    <!-- 계정 생성 -->
-                    <section class="login__register">
-                        <div class="login__register_title">새로 오셨나요?</div>
-                        <p>개인 계정을 생성하시면 다양한 기능을 사용하실 수 있습니다.</p>
-                        <a href="/register/register_index.html">새로운 계정 만들기</a>
-                    </section>
-                </div>
-            </div>
         </div>
     </nav>
+    
     <main class="search__board">
         <header>
             <h1 class="search__title">검색 결과 "사과"</h1>

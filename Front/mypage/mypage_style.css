@@ -239,3 +239,9 @@ a {
     text-indent: 1rem;
     border: 1px solid #fff;
 }
+
+/* nav 로그인 */
+.navbar__sign {
+    visibility: hidden;
+    font-size: 24px;
+}

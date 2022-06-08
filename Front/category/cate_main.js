@@ -1,40 +1,5 @@
 'use strict';
 
-// 로그인 폼
-    function checkOn() {
-        let checkOn = document.getElementById("cheOn");
-        let checkOff = document.getElementById("cheOff");
-    
-        checkOn.style.display = 'block';
-        checkOff.style.display = 'none';
-    }
-    
-    function checkOff() {
-        let checkOn = document.getElementById("cheOn");
-        let checkOff = document.getElementById("cheOff");
-    
-        checkOn.style.display = 'none';
-        checkOff.style.display = 'block';
-    }
-    // 비밀번호 찾기
-    function findPass() {
-        let login = document.getElementsByClassName('login__form')[0];
-        let pass = document.getElementsByClassName('login__findpass')[0];
-    
-        login.style.display = 'none';
-        pass.style.display = 'block';
-    }
-    
-    // 비밀번호 찾기 => 로그인 폼
-    function backLogin() {
-        let login = document.getElementsByClassName('login__form')[0];
-        let pass = document.getElementsByClassName('login__findpass')[0];
-    
-        login.style.display = 'block';
-        pass.style.display = 'none';
-    }
-
-
 // 메뉴 옵션
     function menuOn() {
         let sidebtn = document.getElementById("navbar__sidebtn");
