@@ -45,7 +45,8 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
+    position: fixed;
+    width: 90%;
     background-color: var(--white-color);
     padding: 12px 24px;
     border-bottom: 1px solid #c1c1c1;
@@ -425,6 +426,7 @@ a {
 /* 정렬 */
 .line__top {
     margin: 0.5rem 0 1rem 0;
+    margin-top: 55px;
     display: flex;
     justify-content:space-between;
     align-items: center;
@@ -448,6 +450,20 @@ a {
 }
 
 /* 품목 리스트 */
+.scroll-up {
+    display: none;
+    padding: 0.5rem;
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    background-color: var(--white-color);
+    border: 1px solid var(--gray-color);
+    font-size: 2rem;
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+}
+
 .item__board {
     padding: 1rem 1rem 1rem 1.5rem;
 }
