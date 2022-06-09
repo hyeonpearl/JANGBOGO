@@ -32,6 +32,7 @@ public class JpaMemberRepository implements MemberRepository{
                 .setParameter("email", email)
                 .getResultList();
 
+        System.out.println("findByEmail : " + result.stream().findAny().get().getEmail());
         return result.stream().findAny();
     }
 

@@ -22,6 +22,8 @@ public class Member {
         this.tel = tel;
     }
 
+    public Member(){}
+
     public Long getId() {
         return id;
     }
@@ -35,6 +37,10 @@ public class Member {
     }
 
     private String email;
+
+    public String getPassword() {
+        return password;
+    }
 
     private String password;
 
