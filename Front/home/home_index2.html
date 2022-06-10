@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="/home/home_style.css">
+    <link rel="stylesheet" href="home_style.css">
     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
 
-    <script defer src="/home/home_main.js"></script>
+    <script defer src="home_main.js"></script>
     <script src="https://kit.fontawesome.com/bb430ea525.js"
             crossorigin="anonymous"></script>
 
@@ -104,7 +103,7 @@
 
     <!-- 로그인 -->
     <div class="navbar__sign">
-        <a th:href="@{/login}"><i id="goLogin" class="fa-solid fa-arrow-right-to-bracket"></i></a>
+        <a href="/login/login_index.html"><i id="goLogin" class="fa-solid fa-arrow-right-to-bracket"></i></a>
     </div>
 </nav>
 

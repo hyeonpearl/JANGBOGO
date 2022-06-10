@@ -5,10 +5,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import javax.persistence.criteria.CriteriaBuilder;
-import java.util.HashMap;
-import java.util.Map;
-
 @Controller
 public class MemberController {
     private final MemberService memberService;
@@ -47,18 +43,5 @@ public class MemberController {
         }
 
         return result;
-    }
-
-    @GetMapping("/home")
-    public String login(MemberDto memberDto){
-
-        //로그인 성공
-        if(memberService.login(memberDto.toEntity())){
-            //home 페이지로
-            return "home/home";
-        }
-        else {
-            return "";
-        }
     }
 }

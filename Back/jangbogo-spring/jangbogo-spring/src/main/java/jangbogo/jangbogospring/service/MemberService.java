@@ -55,21 +55,4 @@ public class MemberService {
             return 1;
         }
     }
-
-    public boolean login(Member member){
-        Optional<Member> findMember = memberRepository.findByEmail(member.getEmail());
-
-        //널 값인지 확인
-        if(findMember.isPresent()){
-            return false;
-        }
-
-        //비밀번호 동일한지 확인
-        if(!findMember.get().getPassword().equals(member.getPassword())){
-            return false;
-        }
-
-        //로그인 가능
-        return true;
-    }
 }

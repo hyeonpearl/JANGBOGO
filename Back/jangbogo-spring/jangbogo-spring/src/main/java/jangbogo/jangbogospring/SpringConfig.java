@@ -1,6 +1,7 @@
 package jangbogo.jangbogospring;
 
 import jangbogo.jangbogospring.repository.*;
+import jangbogo.jangbogospring.service.LoginService;
 import jangbogo.jangbogospring.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -20,6 +21,8 @@ public class SpringConfig {
     public MemberService memberService(){
         return new MemberService(memberRepository);
     }
+    @Bean
+    public LoginService loginService(){return new LoginService(memberRepository);}
 
    // @Bean
    // public MemberRepository memberRepository(){
