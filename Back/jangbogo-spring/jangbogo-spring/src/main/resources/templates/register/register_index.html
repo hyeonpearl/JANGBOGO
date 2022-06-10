@@ -39,7 +39,7 @@
                     <div class="register__form_email">
                         <label class="register__form_email_label" for="register__email">이메일*</label>
                         <div class="email-check">
-                            <input id="register__email" type="email" name = "email" placeholder="예) name@example.com" required>
+                            <input id="register__email" type="email" name = "email" onchange="inputEmail()" placeholder="예) name@example.com" required>
                             <button id="register__email-check" type="button" onclick="checkEmail();" >중복 확인</button>
                         </div>
                         <p id="email-check-message">이메일을 입력해주세요.</p>
@@ -99,7 +99,7 @@
                 </div>
             </div>
 
-            <button id="register__form_submit" type="submit">확인</button>
+            <button id="register__form_submit" type="submit" onclick="submitRegister()">확인</button>
             <button id="register__form_cancle" type="button" onclick="backHome()">취소</button>
         </form>
     </section>

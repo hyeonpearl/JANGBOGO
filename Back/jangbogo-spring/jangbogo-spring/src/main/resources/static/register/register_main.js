@@ -4,6 +4,22 @@ function backHome() {
     location.replace("/home/home_index.html");
 }
 
+var isCheckedEmail = false;
+
+function submitRegister(){
+    var btn = document.getElementById('register__form_submit');
+
+    if(!isCheckedEmail){
+        alert("이메일 중복확인 버튼을 눌러주세요.");
+    }
+}
+
+function inputEmail(){
+    isCheckedEmail = false;
+
+    $("#register__form_submit").attr("type", "button");
+}
+
 function checkEmail(){
     var email = document.getElementById('register__email').value;
     var email_regex = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/;
@@ -28,6 +44,8 @@ function checkEmail(){
                 }
                 else{
                     alert("사용가능한 이메일입니다.");
+                    isCheckedEmail = true;
+                    $("#register__form_submit").attr("type", "submit");
                 }
             }
         });
