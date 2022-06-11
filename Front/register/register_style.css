@@ -101,6 +101,7 @@ a {
 }
 
 #email-check-message {
+    display: none;
     font-size: 13px;
     color: var(--red-color);
 }
@@ -112,11 +113,13 @@ a {
 
 /* 회원 가입 비밀번호*/
 #password-message {
+    display: none;
     font-size: 13px;
     color: var(--red-color);
 }
 
 #password-check-message {
+    display: none;
     font-size: 13px;
     color: var(--red-color);
 }
