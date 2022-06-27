@@ -33,12 +33,7 @@ public class MemberService {
         return member.getId();
     }
 
-    public List<Member> findMembers(){
-        return memberRepository.findAll();
-    }
-
     public Optional<Member> findEmail(String memberEmail){
-
         return memberRepository.findByEmail(memberEmail);
     }
 
@@ -54,5 +49,22 @@ public class MemberService {
             System.out.println("해당 이메일 존재" + member.get().getEmail());
             return 1;
         }
+    }
+
+    public boolean login(Member member){
+        Optional<Member> findMember = memberRepository.findByEmail(member.getEmail());
+
+        //널 값이면 로그인 X
+        if(!findMember.isPresent()){
+            return false;
+        }
+
+        //비밀번호 동일하지 않으면 로그인 X
+        if(!findMember.get().getPassword().equals(member.getPassword())){
+            return false;
+        }
+
+        //로그인 가능
+        return true;
     }
 }
