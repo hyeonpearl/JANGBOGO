@@ -13,12 +13,6 @@ public class MemberController {
     public MemberController(MemberService memberService) {
         this.memberService = memberService;
     }
-
-    @GetMapping("/register")
-    public String createForm(){
-        return "register/register_index";
-    }
-
     @PostMapping("/register")
     public String create(MemberDto memberDto){
 
@@ -26,7 +20,6 @@ public class MemberController {
         //존재하는 이메일이면
         return "redirect:/";
     }
-
     @ResponseBody
     @PostMapping("/emailCheck")
     public int emailCheck(String email)
@@ -43,5 +36,19 @@ public class MemberController {
         }
 
         return result;
+    }
+    @PostMapping("/login")
+    public String login(MemberDto memberDto){
+
+        boolean canLogin = memberService.login(memberDto.toEntity());
+
+        if(canLogin){
+            System.out.println("로그인 성공");
+            return "home/home_index";
+        }
+        else{
+            System.out.println("로그인 실패");
+            return "login/login_index";
+        }
     }
 }
