@@ -4,7 +4,7 @@
 function menuOn() {
     let sidebtn = document.getElementById("navbar__sidebtn");
     let searbtn = document.getElementById("navbar__searchbtn");
-    let backgro = document.getElementsByClassName('search__board')[0];
+    let backgro = document.getElementsByClassName('main-board')[0];
 
     searbtn.checked = false;
 
@@ -14,7 +14,7 @@ function menuOn() {
 function searchOn() {
     let sidebtn = document.getElementById("navbar__sidebtn");
     let searbtn = document.getElementById("navbar__searchbtn");
-    let backgro = document.getElementsByClassName('search__board')[0];
+    let backgro = document.getElementsByClassName('main-board')[0];
 
     sidebtn.checked = false;
 

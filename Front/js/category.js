@@ -1,36 +1,33 @@
 'use strict';
 
 // 메뉴 옵션
-    function menuOn() {
-        let sidebtn = document.getElementById("navbar__sidebtn");
-        let searbtn = document.getElementById("navbar__searchbtn");
-        let backgro = document.getElementsByClassName('item__board')[0];
+function menuOn() {
+    let searbtn = document.getElementById("navbar__searchbtn");
+    let backgro = document.getElementsByClassName('main-board')[0];
     
-        searbtn.checked = false;
+    searbtn.checked = false;
     
-        backgro.style.filter = 'none';
-    }
+    backgro.style.filter = 'none';
+}
 
-    function searchOn() {
-        let sidebtn = document.getElementById("navbar__sidebtn");
-        let searbtn = document.getElementById("navbar__searchbtn");
-        let backgro = document.getElementsByClassName('item__board')[0];
+function searchOn() {
+    let sidebtn = document.getElementById("navbar__sidebtn");
+    let searbtn = document.getElementById("navbar__searchbtn");
+    let backgro = document.getElementsByClassName('main-board')[0];
     
-        sidebtn.checked = false;
+    sidebtn.checked = false;
     
-        if (searbtn.checked) {
-            backgro.style.filter = 'blur(10px)';
-        } else {
-            backgro.style.filter = 'none';
-        }
-        
-    }
+    if (searbtn.checked) {
+        backgro.style.filter = 'blur(10px)';
+    } else {
+        backgro.style.filter = 'none';
+    }        
+}
 
 // 정렬 기준
 {
     let sub = document.getElementsByClassName('dropdown_subMenu')[0];
     let sortbtn = document.getElementById('sortBtn');
-    let title = document.getElementById('sortTitle');
 
     sortbtn.addEventListener('click', clickSort);
 
