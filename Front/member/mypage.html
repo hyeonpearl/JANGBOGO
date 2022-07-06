@@ -5,112 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Document</title>
+    <title>내 정보 - 장보고 식자재 조회</title>
 
-    <link rel="stylesheet" href="/css/mypage.css">
     <link rel="stylesheet" href="/css/public.css">
+    <link rel="stylesheet" href="/css/mypage.css">
     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
 
-    <script src="/js/mypage.js"></script>
+    <script defer src="/js/mypage.js"></script>
     <script src="https://kit.fontawesome.com/bb430ea525.js" 
     crossorigin="anonymous"></script>
 </head>
 <body>
     <nav class="navbar">
-        <!-- 사이드 메뉴 -->
-        <div class="navber__side">
-            <input type="checkbox" id="navbar__sidebtn" onclick="menuOn()">
-            <label for="navbar__sidebtn">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
-
-            <!-- 사이드 메뉴 클릭 시 화면-->
-            <div class="navbar__sidebar">
-                <div class="sidebar__content">
-                    <nav></nav>
-                    <!-- 메뉴 카테고리 -->
-                    <div class="category">
-                        <div class="category__meet">
-                            <a href="/category/meat.html">
-                                <span>축산물</span>  
-                                <i class="fa-solid fa-angle-right"></i>
-                            </a>
-                        </div>
-                        <div class="category__seafood">
-                            <a href="/category/seafood.html">
-                                <span>해산물</span>  
-                                <i class="fa-solid fa-angle-right"></i>
-                            </a>
-                        </div>
-                        <div class="category__fruit">
-                            <a href="/category/fruit.html">
-                                <span>과일</span>  
-                                <i class="fa-solid fa-angle-right"></i>
-                            </a>
-                        </div>
-                        <div class="category__vegetable">
-                            <a href="/category/vegeta.html">
-                                <span>채소</span>  
-                                <i class="fa-solid fa-angle-right"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- 메뉴 사용자 콘텐츠 -->
-                    <div class="sidebar__account_content">
-                        <div class="sidebar__mypage">
-                            <a href="mypage.html">
-                                <i class="fa-regular fa-user"></i>
-                                <span>마이페이지</span>
-                            </a>
-                        </div>
-                        <div class="sidebar__favorit">
-                            <a href="#">
-                                <i class="fa-regular fa-heart"></i>
-                                <span>찜 목록</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 검색 -->
-        <div class="navbar__search">
-            <input type="checkbox" id="navbar__searchbtn" onclick="searchOn()">
-            <label for="navbar__searchbtn">
-                <i class="fa-brands fa-sistrix"></i>
-            </label>
-            <!-- 검색 버튼 클릭 시 화면 -->
-            <div class="navbar__searchbar">
-                <form action="">
-                    <nav></nav>
-                    <div class="search__content">
-                        <label for="navbar__search_input">
-                            <i class="fa-brands fa-sistrix"></i>
-                        </label>
-                        <input type="text" id="navbar__search_input" 
-                        placeholder="장보고에서 '최저가'를 찾아드려요!">
-                    </div>
-                </form>
-            </div>
-        </div>
-
         <!-- 로고 -->
         <a href="/index.html" class="navbar__logo">JANGBOGO</a>
-
-        <!-- 로그인 -->
-        <div class="navbar__sign">
-            <label for="navbar__signbtn">
-                <a href="login.html"><i id="goLogin" class="fa-solid fa-arrow-right-to-bracket"></i></a>
-            </label>
-        </div>
     </nav>
 
     <main class="main-board">
-        
+        <section class="greeting">
+            <h3 id="user-name">아무개님,</h3>
+            <p>환영합니다.</p>
+        </section>
+        <section class="my-activity">
+            <h4>활동 내역</h4>
+            <ul>
+                <li><a href="favorite.html">찜 목록</a></li>
+                <li><a href="#">내가 작성한 리뷰</a></li>
+            </ul>
+
+            <h4>내 계정 설정</h4>
+            <ul>
+                <li>
+                    <a href="information.html">내 정보 수정</a>
+                </li>
+                <li>
+                    <button type="button">로그아웃</button>
+                </li>
+            </ul>
+        </section>
     </main>
 </body>
 </html>

@@ -23,14 +23,17 @@
     color: #424242;
 }
 
-
 /* 회원 가입 폼 */
+h2 {
+    margin: 0 0 1rem 0;
+}
+
 .register__form_inputPage {
     padding: 0px 24px 24px;
 }
 
 .register__content {
-    padding: 0px 24px 24px;
+    padding: 1.5rem;
 }
 
 .register__content_title {
@@ -105,12 +108,12 @@
 }
 
 /* 알림 여부 */
-.register__form_alter .alter_explain {
+.register__form_alert .alert_explain {
     margin-bottom: 8px;
     font-size: 13px;
 }
 
-.alter_service_email, .alter_service_tel {
+.alert_service_email, .alert_service_tel {
     font-size: 13px;
     margin-right: 10px;
 }

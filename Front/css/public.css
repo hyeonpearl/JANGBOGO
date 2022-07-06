@@ -8,7 +8,7 @@
     --green-color: #4caf50;
 }
 
-body, h3 {
+body {
     font-family: 'Do Hyeon', sans-serif;
     margin: 0px;
     padding: 0px;
@@ -19,9 +19,15 @@ h1 {
     margin-bottom: 15px;
 }
 
-hr, p, dl, dt, dd, button {
+hr, p, dl, dt, dd, button, h2, h3, h4 {
     margin: 0;
     padding: 0;
+}
+
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
 
 button {

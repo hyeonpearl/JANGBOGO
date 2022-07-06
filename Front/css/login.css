@@ -1,7 +1,11 @@
-/* nav 로그인 */
-.navbar__sign {
-    visibility: hidden;
-    font-size: 24px;
+.navbar {
+    display: block;
+    position: relative;
+}
+
+.navbar .navbar__logo {
+    position: relative;
+    left: 35%;
 }
 
 /* 로그인 폼 */
@@ -97,8 +101,7 @@
 }
 
 .findpass_title {
-    margin: 0;
-    margin-bottom: 24px;
+    margin: 0 0 24px 0;
     font-size: 17px;
     font-weight: bolder;
 }

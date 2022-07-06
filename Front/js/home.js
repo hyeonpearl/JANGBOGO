@@ -1,5 +1,14 @@
 'use strict';
 
+/* 추천 품목 마진 넣기 */ 
+function margin() {
+    let item = document.querySelectorAll('.item');
+
+    for (let i = 1; i < item.length; i++) {
+        item[i].style.marginLeft = '20px';
+    }
+}
+
 // 메뉴 옵션
 function menuOn() {
     let searbtn = document.getElementById("navbar__searchbtn");
@@ -79,11 +88,4 @@ document.addEventListener('DOMContentLoaded', function(){
     banner.rollInit(4000); // 배너 롤링
 });
 
-/* 추천 품목 마진 넣기 */ 
-function margin() {
-    let item = document.querySelectorAll('.item');
-
-    for (let i = 1; i < item.length; i++) {
-        item[i].style.marginLeft = '20px';
-    }
-}
+margin();
