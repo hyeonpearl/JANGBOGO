@@ -104,7 +104,9 @@
 
     <!-- 로그아웃 -->
     <div class="navbar__sign">
-        <a th:href="@{/logout}"><span>로그아웃</span></a>
+        <form action="/logout" method="post">
+          <button type="submit">로그아웃</button>
+        </form>
     </div>
 </nav>
 

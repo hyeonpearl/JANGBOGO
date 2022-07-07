@@ -42,20 +42,5 @@ public class MemberController {
 
         return result;
     }
-    @PostMapping("/login")
-    public String login(MemberDto memberDto, HttpServletRequest request){
 
-        boolean canLogin = memberService.login(memberDto.toEntity());
-
-        if(canLogin){
-            HttpSession session = request.getSession();
-            session.setAttribute(HttpSessionUtils.LOGIN_MEMBER, memberDto.toEntity());
-            System.out.println("로그인 성공");
-            return "redirect:/";
-        }
-        else{
-            System.out.println("로그인 실패");
-            return "login/login_index";
-        }
-    }
 }

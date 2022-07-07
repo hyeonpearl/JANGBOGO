@@ -24,11 +24,6 @@ public class HomeController {
         return "home/loginHome_index";
     }
 
-    @GetMapping("/login")
-    public String goLogin() {
-        return "login/login_index";
-    }
-
     @GetMapping("/register")
     public String signUp(){
         return "register/register_index";
