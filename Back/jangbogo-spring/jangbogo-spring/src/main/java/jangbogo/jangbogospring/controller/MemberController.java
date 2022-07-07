@@ -1,9 +1,14 @@
 package jangbogo.jangbogospring.controller;
 
+import jangbogo.jangbogospring.dto.MemberDto;
 import jangbogo.jangbogospring.service.MemberService;
+import jangbogo.jangbogospring.session.HttpSessionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 @Controller
 public class MemberController {
@@ -38,13 +43,15 @@ public class MemberController {
         return result;
     }
     @PostMapping("/login")
-    public String login(MemberDto memberDto){
+    public String login(MemberDto memberDto, HttpServletRequest request){
 
         boolean canLogin = memberService.login(memberDto.toEntity());
 
         if(canLogin){
+            HttpSession session = request.getSession();
+            session.setAttribute(HttpSessionUtils.LOGIN_MEMBER, memberDto.toEntity());
             System.out.println("로그인 성공");
-            return "home/home_index";
+            return "redirect:/";
         }
         else{
             System.out.println("로그인 실패");

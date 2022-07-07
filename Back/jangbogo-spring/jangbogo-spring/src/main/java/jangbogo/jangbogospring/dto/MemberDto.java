@@ -1,4 +1,4 @@
-package jangbogo.jangbogospring.controller;
+package jangbogo.jangbogospring.dto;
 
 import com.sun.istack.NotNull;
 import jangbogo.jangbogospring.domain.Member;
