@@ -5,17 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="css/public.css">
     <link rel="stylesheet" href="css/home.css">
     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
-    
+
     <script defer src="js/home.js"></script>
+    <script defer src="js/location.js"></script>
     <script src="https://kit.fontawesome.com/bb430ea525.js" 
     crossorigin="anonymous"></script>
 
-
     <title>장보고 - 식자재 최저가 조회</title>
 </head>
-<body onload="margin()">
+<body>
     <nav class="navbar">
         <!-- 사이드 메뉴 -->
         <div class="navber__side">
@@ -61,13 +62,13 @@
                     <!-- 메뉴 사용자 콘텐츠 -->
                     <div class="sidebar__account_content">
                         <div class="sidebar__mypage">
-                            <a href="member/login.html">
+                            <a href="member/mypage.html">
                                 <i class="fa-regular fa-user"></i>
                                 <span>마이페이지</span>
                             </a>
                         </div>
                         <div class="sidebar__favorit">
-                            <a href="member/login.html">
+                            <a href="/member/favorite.html">
                                 <i class="fa-regular fa-heart"></i>
                                 <span>찜 목록</span>
                             </a>
@@ -138,7 +139,7 @@
         </ul>
     </div>
 
-    <main class="home__board">
+    <main class="main-board">
         <!-- 배너 -->
         <section class="home__banner">
             <ul class="home__banner_list">

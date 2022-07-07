@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>내 정보 수정 - 장보고 식자재 조회</title>
+
+    <link rel="stylesheet" href="/css/public.css">
+    <link rel="stylesheet" href="/css/information.css">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+
+    <script defer src="/js/information.js"></script>
+    <script src="https://kit.fontawesome.com/bb430ea525.js" 
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <!-- 로고 -->
+        <a href="/index.html" class="navbar__logo">JANGBOGO</a>
+    </nav>
+    <section>
+        <h3>내 정보 수정</h3>
+        <fieldset>
+            <div class="login-info">
+                <h4>로그인 정보</h4>
+                <div class="" id="email">
+                    <label>이메일</label>
+                    <input type="email" value="name@example" readonly>
+                    <button type="button">변경</button>
+                </div>
+                <div class="hidden">
+                    <form id="email-form">
+                        <label for="">이메일</label>
+                        <input type="email" id="modify-email" placeholder="이메일 입력">
+                        <button type="button">변경 취소</button>
+                        <button type="button">인증메일 발송</button>
+                    </form>
+                </div>
+                <div>
+                    <button type="button">비밀번호 수정</button>
+                    <div>
+                        <label for="">비밀번호</label>
+                        <input type="password" id="modify-password">
+                        <label for="">비밀번호 확인</label>
+                        <input type="password" id="modify-password-check">
+                        <button type="button">변경 취소</button>
+                        <button type="button">비밀번호 변경</button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h4>사용자 정보</h4>
+                <div>
+                    <label for="">성명</label>
+                    <input type="text" id="modify-name" value="아무개">
+                </div>
+                <div>
+                    <label for="">연락처</label>
+                    <input type="tel" id="modify-tel" value="010 1234 1234">
+                </div>
+                <div>
+                    <label for="">주소</label>
+                    <input type="text" id="modify-address" value="서울시 중랑구">
+                </div>
+                <button type="button">저장하기</button>
+            </div>
+            <div>
+                <h4>최저가 정보 수신 동의</h4>
+                <label class="alert_service_email">
+                    <input type="checkbox" name="alert_service_email" id="alert_service_email">
+                    <span class="alert_title">이메일</span>
+                </label>
+                <label class="alert_service_tel">
+                    <input type="checkbox" name="alert_service_tel" id="alert_service_tel">
+                    <span class="alert_title">휴대폰</span>
+                </label>
+                <p>
+                    원하는 방식으로 최저가 정보 알림을 선택할 수 있습니다.
+                </p>
+            </div>
+            <a href="#">회원탈퇴</a>
+        </fieldset>
+    </section>
+</body>
+</html>

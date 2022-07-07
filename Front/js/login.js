@@ -22,7 +22,7 @@ function backLogin() {
 // 메뉴 옵션
 function menuOn() {
     let searbtn = document.getElementById("navbar__searchbtn");
-    let backgro = document.getElementsByClassName('login__board')[0];
+    let backgro = document.getElementsByClassName('main-board')[0];
 
     searbtn.checked = false;
     backgro.style.filter = 'none';
@@ -31,7 +31,7 @@ function menuOn() {
 function searchOn() {
     let sidebtn = document.getElementById("navbar__sidebtn");
     let searbtn = document.getElementById("navbar__searchbtn");
-    let backgro = document.getElementsByClassName('login__board')[0];
+    let backgro = document.getElementsByClassName('main-board')[0];
 
     sidebtn.checked = false;
 
