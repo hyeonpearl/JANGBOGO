@@ -8,7 +8,7 @@
     <title>내 정보 수정 - 장보고 식자재 조회</title>
 
     <link rel="stylesheet" href="/css/public.css">
-    <link rel="stylesheet" href="/css/information.css">
+    <link rel="stylesheet" href="/css/edit-info.css">
     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
 
     <script defer src="/js/edit-info.js"></script>
@@ -60,19 +60,21 @@
             </div>
             <div class="user-info">
                 <h4>사용자 정보</h4>
-                <div>
-                    <label for="">성명</label>
-                    <input type="text" id="modify-name" value="아무개">
-                </div>
-                <div>
-                    <label for="">연락처</label>
-                    <input type="tel" id="modify-tel" value="010 1234 1234">
-                </div>
-                <div>
-                    <label for="">주소</label>
-                    <input type="text" id="modify-address" value="서울시 중랑구">
-                </div>
-                <button id="save-info" type="button">저장하기</button>
+                <form>
+                    <div>
+                        <label for="">성명</label>
+                        <input type="text" id="modify-name" value="아무개">
+                    </div>
+                    <div>
+                        <label for="">연락처</label>
+                        <input type="tel" id="modify-tel" value="010 1234 1234">
+                    </div>
+                    <div>
+                        <label for="">주소</label>
+                        <input type="text" id="modify-address" value="서울시 중랑구">
+                    </div>
+                    <button id="save-info" type="button">저장하기</button>
+                </form>
             </div>
             <div class="alert-service">
                 <h4>최저가 정보 수신 동의</h4>
