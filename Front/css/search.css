@@ -32,8 +32,7 @@
 
 
 /* 검색 결과 */
-.scroll-up {
-    display: none;
+#scroll-up {
     padding: 0.5rem;
     position: fixed;
     bottom: 5%;
@@ -51,8 +50,7 @@
 }
 
 .main-board {
-    
-    padding: 130px 1rem 1rem 1.5rem;
+    padding: 5rem 1rem 1rem 1.5rem;
 }
 
 .search_itemlist .item {

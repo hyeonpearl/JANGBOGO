@@ -1,12 +1,14 @@
 'use strict';
 
-window.addEventListener("scroll", (event) => {
+window.addEventListener('scroll', (event) => {
     let scrollY = this.scrollY;
-    let btn = document.getElementsByClassName('scroll-up')[0];
-    
-    if (scrollY > 30) {
-        btn.style.display = 'block';
+    const scrollBtn = document.querySelector('#scroll-up');
+
+    const HIDDEN_CLASSNAME = 'hidden';
+
+    if (scrollY > 20) {
+        scrollBtn.classList.remove(HIDDEN_CLASSNAME);
     } else {
-        btn.style.display = 'none';
+        scrollBtn.classList.add(HIDDEN_CLASSNAME);
     }
 });

@@ -29,17 +29,13 @@
     color: var(--black-color);
 }
 
-.login__form {
-    display: block;
-}
-
-.login__form .login__form_title {
+#login__form .login__form_title {
     padding: 14px 0 14px 0;
     font-size: 18px;
     font-weight: bolder;
 }
 
-.login__form label {
+#login__form label {
     margin: 0px 0px 8px;
     font-size: 12px;
 }

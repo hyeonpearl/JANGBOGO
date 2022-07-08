@@ -1,214 +1,214 @@
-let back = document.getElementsByClassName('main-board')[0];
-let locBoard = document.getElementsByClassName('setLocation')[0];
-let locBtn = document.getElementsByClassName('home__locationBtn')[0];
-let locTitle = document.getElementById('locationTitle');
-let nav = document.getElementsByClassName('navbar')[0];
+const nav = document.querySelector('.navbar');
+const background = document.querySelector('.main-board');
 
-let loc1 = document.getElementById('loc1');
-let loc2 = document.getElementById('loc2');
-let loc3 = document.getElementById('loc3');
-let loc4 = document.getElementById('loc4');
-let loc5 = document.getElementById('loc5');
-let loc6 = document.getElementById('loc6');
-let loc7 = document.getElementById('loc7');
-let loc8 = document.getElementById('loc8');
-let loc9 = document.getElementById('loc9');
-let loc10 = document.getElementById('loc10');
-let loc11 = document.getElementById('loc11');
-let loc12 = document.getElementById('loc12');
-let loc13 = document.getElementById('loc13');
-let loc14 = document.getElementById('loc14');
-let loc15 = document.getElementById('loc15');
-let loc16 = document.getElementById('loc16');
-let loc17 = document.getElementById('loc17');
-let loc18 = document.getElementById('loc18');
-let loc19 = document.getElementById('loc19');
-let loc20 = document.getElementById('loc20');
-let loc21 = document.getElementById('loc21');
-let loc22 = document.getElementById('loc22');
-let loc23 = document.getElementById('loc23');
-let loc24 = document.getElementById('loc24');
-let loc25 = document.getElementById('loc25');
+const locBoard = document.querySelector('.setLocation');
+const locBtn = document.querySelector('.home__locationBtn');
+const locTitle = document.querySelector('#locationTitle');
 
-locBtn.addEventListener('click', openLoc);
-loc1.addEventListener('click', setLoc1);
-loc2.addEventListener('click', setLoc2);
-loc3.addEventListener('click', setLoc3);
-loc4.addEventListener('click', setLoc4);
-loc5.addEventListener('click', setLoc5);
-loc6.addEventListener('click', setLoc6);
-loc7.addEventListener('click', setLoc7);
-loc8.addEventListener('click', setLoc8);
-loc9.addEventListener('click', setLoc9);
-loc10.addEventListener('click', setLoc10);
-loc11.addEventListener('click', setLoc11);
-loc12.addEventListener('click', setLoc12);
-loc13.addEventListener('click', setLoc13);
-loc14.addEventListener('click', setLoc14);
-loc15.addEventListener('click', setLoc15);
-loc16.addEventListener('click', setLoc16);
-loc17.addEventListener('click', setLoc17);
-loc18.addEventListener('click', setLoc18);
-loc19.addEventListener('click', setLoc19);
-loc20.addEventListener('click', setLoc20);
-loc21.addEventListener('click', setLoc21);
-loc22.addEventListener('click', setLoc22);
-loc23.addEventListener('click', setLoc23);
-loc24.addEventListener('click', setLoc24);
-loc25.addEventListener('click', setLoc25);
+const loc1 = document.getElementById('loc1');
+const loc2 = document.getElementById('loc2');
+const loc3 = document.getElementById('loc3');
+const loc4 = document.getElementById('loc4');
+const loc5 = document.getElementById('loc5');
+const loc6 = document.getElementById('loc6');
+const loc7 = document.getElementById('loc7');
+const loc8 = document.getElementById('loc8');
+const loc9 = document.getElementById('loc9');
+const loc10 = document.getElementById('loc10');
+const loc11 = document.getElementById('loc11');
+const loc12 = document.getElementById('loc12');
+const loc13 = document.getElementById('loc13');
+const loc14 = document.getElementById('loc14');
+const loc15 = document.getElementById('loc15');
+const loc16 = document.getElementById('loc16');
+const loc17 = document.getElementById('loc17');
+const loc18 = document.getElementById('loc18');
+const loc19 = document.getElementById('loc19');
+const loc20 = document.getElementById('loc20');
+const loc21 = document.getElementById('loc21');
+const loc22 = document.getElementById('loc22');
+const loc23 = document.getElementById('loc23');
+const loc24 = document.getElementById('loc24');
+const loc25 = document.getElementById('loc25');
 
-function openLoc() {
+locBtn.addEventListener('click', function() {
     locBoard.style.display = 'block';
-        back.style.filter = 'blur(5px)';
-        nav.style.filter = 'blur(5px)';
-    }
-function setLoc1() {
+    background.style.filter = 'blur(5px)';
+    nav.style.filter = 'blur(5px)';
+});
+
+loc1.addEventListener('click', function() {
     locTitle.innerText = '서울시 강남구 >';
     locBoard.style.display = 'none';
-        back.style.filter = 'none';
-        nav.style.filter = 'none';
-    }
-function setLoc2() {
+    background.style.filter = 'none';
+    nav.style.filter = 'none';
+});
+
+loc2.addEventListener('click', function() {
     locTitle.innerText = '서울시 강동구 >';
     locBoard.style.display = 'none';
-        back.style.filter = 'none';
-        nav.style.filter = 'none';
-    }
-function setLoc3() {
+    background.style.filter = 'none';
+    nav.style.filter = 'none';
+});
+
+loc3.addEventListener('click', function() {
     locTitle.innerText = '서울시 강북구 >';
     locBoard.style.display = 'none';
-        back.style.filter = 'none';
-        nav.style.filter = 'none';
-    }
-function setLoc4() {
+    background.style.filter = 'none';
+    nav.style.filter = 'none';
+});
+
+loc4.addEventListener('click', function() {
     locTitle.innerText = '서울시 강서구 >';
     locBoard.style.display = 'none';
-        back.style.filter = 'none';
-        nav.style.filter = 'none';
-    }
-function setLoc5() {
+    background.style.filter = 'none';
+    nav.style.filter = 'none';
+});
+
+loc5.addEventListener('click', function() {
     locTitle.innerText = '서울시 관악구 >';
     locBoard.style.display = 'none';
-        back.style.filter = 'none';
-        nav.style.filter = 'none';
-    }
-function setLoc6() {
+    background.style.filter = 'none';
+    nav.style.filter = 'none';
+});
+
+loc6.addEventListener('click', function() {
     locTitle.innerText = '서울시 광진구 >';
     locBoard.style.display = 'none';
-        back.style.filter = 'none';
-        nav.style.filter = 'none';
-    }
-function setLoc7() {
+    background.style.filter = 'none';
+    nav.style.filter = 'none';
+});
+
+loc7.addEventListener('click', function() {
     locTitle.innerText = '서울시 구로구 >';
     locBoard.style.display = 'none';
-        back.style.filter = 'none';
-        nav.style.filter = 'none';
-    }
-function setLoc8() {
+    background.style.filter = 'none';
+    nav.style.filter = 'none';
+});
+
+loc8.addEventListener('click', function() {
     locTitle.innerText = '서울시 금천구 >';
     locBoard.style.display = 'none';
-        back.style.filter = 'none';
-        nav.style.filter = 'none';
-    }
-function setLoc9() {
+    background.style.filter = 'none';
+    nav.style.filter = 'none';
+});
+
+loc9.addEventListener('click', function() {
     locTitle.innerText = '서울시 노원구 >';
     locBoard.style.display = 'none';
-        back.style.filter = 'none';
-        nav.style.filter = 'none';
-    }
-function setLoc10() {
+    background.style.filter = 'none';
+    nav.style.filter = 'none';
+});
+
+loc10.addEventListener('click', function() {
     locTitle.innerText = '서울시 도봉구 >';
     locBoard.style.display = 'none';
-        back.style.filter = 'none';
-        nav.style.filter = 'none';
-    }
-function setLoc11() {
+    background.style.filter = 'none';
+    nav.style.filter = 'none';
+});
+
+loc11.addEventListener('click', function() {
     locTitle.innerText = '서울시 동대문구 >';
     locBoard.style.display = 'none';
-        back.style.filter = 'none';
-        nav.style.filter = 'none';
-    }
-function setLoc12() {
+    background.style.filter = 'none';
+    nav.style.filter = 'none';
+});
+
+loc12.addEventListener('click', function() {
     locTitle.innerText = '서울시 동작구 >';
     locBoard.style.display = 'none';
-        back.style.filter = 'none';
-        nav.style.filter = 'none';
-    }
-function setLoc13() {
+    background.style.filter = 'none';
+    nav.style.filter = 'none';
+});
+
+loc13.addEventListener('click', function() {
     locTitle.innerText = '서울시 마포구 >';
     locBoard.style.display = 'none';
-        back.style.filter = 'none';
-        nav.style.filter = 'none';
-    }
-function setLoc14() {
+    background.style.filter = 'none';
+    nav.style.filter = 'none';
+});
+
+loc14.addEventListener('click', function() {
     locTitle.innerText = '서울시 서대문구 >';
     locBoard.style.display = 'none';
-        back.style.filter = 'none';
-        nav.style.filter = 'none';
-    }
-function setLoc15() {
+    background.style.filter = 'none';
+    nav.style.filter = 'none';
+});
+
+
+loc15.addEventListener('click', function() {
     locTitle.innerText = '서울시 서초구 >';
     locBoard.style.display = 'none';
-        back.style.filter = 'none';
-        nav.style.filter = 'none';
-    }
-function setLoc16() {
+    background.style.filter = 'none';
+    nav.style.filter = 'none';
+});
+
+loc16.addEventListener('click', function() {
     locTitle.innerText = '서울시 성동구 >';
     locBoard.style.display = 'none';
-        back.style.filter = 'none';
-        nav.style.filter = 'none';
-    }
-function setLoc17() {
+    background.style.filter = 'none';
+    nav.style.filter = 'none';
+});
+
+loc17.addEventListener('click', function() {
     locTitle.innerText = '서울시 성북구 >';
     locBoard.style.display = 'none';
-        back.style.filter = 'none';
-        nav.style.filter = 'none';
-    }
-function setLoc18() {
+    background.style.filter = 'none';
+    nav.style.filter = 'none';
+});
+
+loc18.addEventListener('click', function() {
     locTitle.innerText = '서울시 송파구 >';
     locBoard.style.display = 'none';
-        back.style.filter = 'none';
-        nav.style.filter = 'none';
-    }
-function setLoc19() {
+    background.style.filter = 'none';
+    nav.style.filter = 'none';
+});
+
+loc19.addEventListener('click', function() {
     locTitle.innerText = '서울시 양천구 >';
     locBoard.style.display = 'none';
-        back.style.filter = 'none';
-        nav.style.filter = 'none';
-    }
-function setLoc20() {
+    background.style.filter = 'none';
+    nav.style.filter = 'none';
+});
+
+loc20.addEventListener('click', function() {
     locTitle.innerText = '서울시 영등포구 >';
     locBoard.style.display = 'none';
-        back.style.filter = 'none';
-        nav.style.filter = 'none';
-    }
-function setLoc21() {
+    background.style.filter = 'none';
+    nav.style.filter = 'none';
+});
+
+loc21.addEventListener('click', function() {
     locTitle.innerText = '서울시 용산구 >';
     locBoard.style.display = 'none';
-        back.style.filter = 'none';
-        nav.style.filter = 'none';
-    }
-function setLoc22() {
+    background.style.filter = 'none';
+    nav.style.filter = 'none';
+});
+
+loc22.addEventListener('click', function() {
     locTitle.innerText = '서울시 은평구 >';
     locBoard.style.display = 'none';
-        back.style.filter = 'none';
-        nav.style.filter = 'none';
-    }
-function setLoc23() {
+    background.style.filter = 'none';
+    nav.style.filter = 'none';
+});
+
+loc23.addEventListener('click', function() {
     locTitle.innerText = '서울시 종로구 >';
     locBoard.style.display = 'none';
-        back.style.filter = 'none';
-        nav.style.filter = 'none';
-    }
-function setLoc24() {
+    background.style.filter = 'none';
+    nav.style.filter = 'none';
+});
+
+loc24.addEventListener('click', function() {
     locTitle.innerText = '서울시 중구 >';
     locBoard.style.display = 'none';
-        back.style.filter = 'none';
-        nav.style.filter = 'none';
-    }
-function setLoc25() {
+    background.style.filter = 'none';
+    nav.style.filter = 'none';
+});
+
+loc25.addEventListener('click', function() {
     locTitle.innerText = '서울시 중랑구 >';
     locBoard.style.display = 'none';
-        back.style.filter = 'none';
-        nav.style.filter = 'none';
-    }
+    background.style.filter = 'none';
+    nav.style.filter = 'none';
+});

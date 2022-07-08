@@ -249,3 +249,16 @@ a {
     text-indent: 1rem;
     border: 1px solid #fff;
 }
+
+#scroll-up {
+    padding: 0.5rem;
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    background-color: var(--white-color);
+    border: 1px solid var(--gray-color);
+    font-size: 2rem;
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+}
