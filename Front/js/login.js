@@ -1,44 +1,19 @@
 'use strict';
 
-// 비밀번호 찾기
-function findPass() {
-    let login = document.getElementsByClassName('login__form')[0];
-    let pass = document.getElementsByClassName('login__findpass')[0];
+const loginForm = document.querySelector('#login__form');
+const goFindPass = document.querySelector('.login__form_findPass');
 
-    login.style.display = 'none';
-    pass.style.display = 'block';
-}
+const findPassword = document.querySelector('#findPassword');
+const goLoginForm = document.querySelector('.findpass_cancle');
 
-// 비밀번호 찾기 => 로그인 폼
-function backLogin() {
-    let login = document.getElementsByClassName('login__form')[0];
-    let pass = document.getElementsByClassName('login__findpass')[0];
+const HIDDEN_CLASSNAME = 'hidden';
 
-    login.style.display = 'block';
-    pass.style.display = 'none';
-}
+goFindPass.addEventListener('click', function() {
+    loginForm.classList.add(HIDDEN_CLASSNAME);
+    findPassword.classList.remove(HIDDEN_CLASSNAME);
+});
 
-
-// 메뉴 옵션
-function menuOn() {
-    let searbtn = document.getElementById("navbar__searchbtn");
-    let backgro = document.getElementsByClassName('main-board')[0];
-
-    searbtn.checked = false;
-    backgro.style.filter = 'none';
-}
-
-function searchOn() {
-    let sidebtn = document.getElementById("navbar__sidebtn");
-    let searbtn = document.getElementById("navbar__searchbtn");
-    let backgro = document.getElementsByClassName('main-board')[0];
-
-    sidebtn.checked = false;
-
-    if (searbtn.checked) {
-        backgro.style.filter = 'blur(10px)';
-    } else {
-        backgro.style.filter = 'none';
-    }
-    
-}
+goLoginForm.addEventListener('click', function() {
+    loginForm.classList.remove(HIDDEN_CLASSNAME);
+    findPassword.classList.add(HIDDEN_CLASSNAME);
+})

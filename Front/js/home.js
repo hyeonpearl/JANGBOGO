@@ -9,35 +9,6 @@ function margin() {
     }
 }
 
-// 메뉴 옵션
-function menuOn() {
-    let searbtn = document.getElementById("navbar__searchbtn");
-    let backgro = document.getElementsByClassName('main-board')[0];
-    let locBoard = document.getElementsByClassName('setLocation')[0];
-
-    searbtn.checked = false;
-
-    locBoard.style.display = 'none';
-    backgro.style.filter = 'none';
-}
-
-function searchOn() {
-    let sidebtn = document.getElementById("navbar__sidebtn");
-    let searbtn = document.getElementById("navbar__searchbtn");
-    let backgro = document.getElementsByClassName('main-board')[0];
-    let locBoard = document.getElementsByClassName('setLocation')[0];
-
-    sidebtn.checked = false;
-    locBoard.style.display = 'none';
-
-    if (searbtn.checked) {
-        backgro.style.filter = 'blur(10px)';
-    } else {
-        backgro.style.filter = 'none';
-    }
-    
-}
-
 let banner = {
     rollId: null,
     interval: 2000,
