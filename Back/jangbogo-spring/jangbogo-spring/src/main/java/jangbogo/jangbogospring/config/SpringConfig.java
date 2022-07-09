@@ -1,4 +1,4 @@
-package jangbogo.jangbogospring;
+package jangbogo.jangbogospring.config;
 
 import jangbogo.jangbogospring.repository.*;
 import jangbogo.jangbogospring.service.MemberService;
