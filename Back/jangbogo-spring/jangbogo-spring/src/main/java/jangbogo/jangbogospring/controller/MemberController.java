@@ -25,6 +25,7 @@ public class MemberController {
         //존재하는 이메일이면
         return "redirect:/";
     }
+
     @ResponseBody
     @PostMapping("/emailCheck")
     public int emailCheck(String email)
