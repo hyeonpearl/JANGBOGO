@@ -15,17 +15,17 @@ public class HomeController {
     {
         if(loginMember == null)
         {
-            return "home/home_index";
+            return "home/home";
         }
 
         // 세션이 유지되면 로그인 홈으로 이동
         model.addAttribute("member", loginMember);
         System.out.println("로그인 홈으로 이동");
-        return "home/loginHome_index";
+        return "home/loginHome";
     }
 
     @GetMapping("/register")
     public String signUp(){
-        return "register/register_index";
+        return "register/register";
     }
 }
