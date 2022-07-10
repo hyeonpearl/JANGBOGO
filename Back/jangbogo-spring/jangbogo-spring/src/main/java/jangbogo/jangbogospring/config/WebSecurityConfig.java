@@ -1,5 +1,6 @@
 package jangbogo.jangbogospring.config;
 
+import jangbogo.jangbogospring.security.MemberDetailsServiceImpl;
 import jangbogo.jangbogospring.service.MemberService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -22,7 +23,7 @@ public class WebSecurityConfig {
 
     @Bean
     public UserDetailsService userDetailsService() {
-        return new UserDetailsServiceImpl();
+        return new MemberDetailsServiceImpl();
     }
 
     @Bean
