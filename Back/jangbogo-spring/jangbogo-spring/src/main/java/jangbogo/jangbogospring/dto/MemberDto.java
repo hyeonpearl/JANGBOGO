@@ -1,18 +1,21 @@
 package jangbogo.jangbogospring.dto;
 
-import com.sun.istack.NotNull;
 import jangbogo.jangbogospring.domain.Member;
 import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 public class MemberDto {
 
-    @NotNull
     private Long id;
-    private String name;
     private String email;
     private String password;
+    private String name;
     private String address;
     private String tel;
+    private Boolean enabled;
 
     public Member toEntity() {
         Member build = Member.builder()
@@ -22,21 +25,20 @@ public class MemberDto {
                 .name(name)
                 .address(address)
                 .tel(tel)
+                .enabled(enabled)
                 .build();
         return build;
     }
 
     @Builder
-    public MemberDto(Long id, String name, String email, String password, String address, String tel) {
+    public MemberDto(Long id, String email, String password, String name, String address, String tel, Boolean enabled) {
         this.id = id;
-        this.name = name;
         this.email = email;
         this.password = password;
+        this.name = name;
         this.address = address;
         this.tel = tel;
+        this.enabled = enabled;
     }
 
-    protected MemberDto(){
-
-    }
 }

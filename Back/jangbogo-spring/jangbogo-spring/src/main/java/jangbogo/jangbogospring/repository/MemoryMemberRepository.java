@@ -1,7 +1,6 @@
 package jangbogo.jangbogospring.repository;
 
 import jangbogo.jangbogospring.domain.Member;
-import org.springframework.stereotype.Repository;
 
 import java.util.*;
 

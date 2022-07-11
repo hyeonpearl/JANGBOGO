@@ -2,13 +2,9 @@ package jangbogo.jangbogospring.controller;
 
 import jangbogo.jangbogospring.dto.MemberDto;
 import jangbogo.jangbogospring.service.MemberService;
-import jangbogo.jangbogospring.session.HttpSessionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 
 @Controller
 public class MemberController {
@@ -21,7 +17,7 @@ public class MemberController {
     @PostMapping("/register")
     public String create(MemberDto memberDto){
 
-        memberService.join(memberDto.toEntity());
+        memberService.save(memberDto.toEntity());
         //존재하는 이메일이면
         return "redirect:/";
     }
@@ -30,6 +26,7 @@ public class MemberController {
     @PostMapping("/emailCheck")
     public int emailCheck(String email)
     {
+        System.out.println("이메일 체크");
         int result = memberService.isCheckEmail(email);
 
         if(result == 0)

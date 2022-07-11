@@ -36,7 +36,7 @@ function checkEmail(){
             type:'POST',
             data:{email : email},
             url:"/emailCheck",
-            dataType:"json",
+            dataType:"text",
             success: function(data){
 
                 if(data == 1){
