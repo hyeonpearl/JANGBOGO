@@ -50,4 +50,9 @@ public class MemberController {
     public String editInfo(){
         return "member/edit-info";
     }
+
+    @GetMapping("/favorite")
+    public String favorite() {
+        return "member/favorite";
+    }
 }
