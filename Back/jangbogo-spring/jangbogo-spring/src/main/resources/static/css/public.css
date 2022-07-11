@@ -262,3 +262,7 @@ a {
     height: 2rem;
     text-align: center;
 }
+
+.navbar__sign form button {
+    font-size: 1.25rem;
+}

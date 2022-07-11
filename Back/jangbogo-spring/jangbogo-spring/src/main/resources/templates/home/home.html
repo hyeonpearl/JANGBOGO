@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/public.css">
     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
 
     <script defer src="/js/home.js"></script>
     <script src="https://kit.fontawesome.com/bb430ea525.js"
             crossorigin="anonymous"></script>
-
 
     <title>장보고 - 식자재 최저가 조회</title>
 </head>
@@ -106,7 +106,7 @@
     <div class="navbar__sign">
         <a th:href="@{/login}" sec:authorize="!isAuthenticated()"><i id="goLogin" class="fa-solid fa-arrow-right-to-bracket"></i></a>
         <form th:action="@{/logout}" method="post" sec:authorize="isAuthenticated()">
-            <button type="submit">로그아웃</button>
+            <button type="submit"><i class="fa-solid fa-power-off"></i></button>
         </form>
     </div>
 </nav>
