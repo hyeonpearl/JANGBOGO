@@ -41,4 +41,13 @@ public class MemberController {
         return result;
     }
 
+    @GetMapping("/mypage")
+    public String mypageForm() {
+        return "mypage/mypage";
+    }
+
+    @GetMapping("/editInfo")
+    public String editInfo(){
+        return "member/edit-info";
+    }
 }
