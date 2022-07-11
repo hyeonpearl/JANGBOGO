@@ -33,6 +33,8 @@ public class MemberService {
         String encodedPassword = passwordEncoder.encode(member.getPassword());
         member.setPassword(encodedPassword);
         member.setEnabled(true);
+        
+        // 권한을 1 - ROLE_MEMBER로 설정, 현재는 ROLE_MEMBER 이외의 권한이 없음.
         Role role = new Role();
         role.setId(1l);
         member.getRoles().add(role);
