@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="/css/cate_style.css">
+    <link rel="stylesheet" href="/css/public.css">
+    <link rel="stylesheet" href="/css/category.css">
     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
 
-    <script src="/js/cate_main.js"></script>
+    <script defer src="/js/sort.js"></script>
+    <script defer src="/js/nav-activity.js"></script>
+    <script defer src="/js/scroll-up.js"></script>
     <script src="https://kit.fontawesome.com/bb430ea525.js" 
     crossorigin="anonymous"></script>
 
-    <title>장보고 - 해산물 카테고리</title>
+    <title>해산물 - 장보고 식자재 조회</title>
 </head>
 <body>
     <nav class="navbar">
@@ -24,6 +28,7 @@
                 <span></span>
                 <span></span>
             </label>
+
             <!-- 사이드 메뉴 클릭 시 화면-->
             <div class="navbar__sidebar">
                 <div class="sidebar__content">
@@ -31,25 +36,25 @@
                     <!-- 메뉴 카테고리 -->
                     <div class="category">
                         <div class="category__meet">
-                            <a href="/category/cate_meat.html">
+                            <a href="meat.html">
                                 <span>축산물</span>  
                                 <i class="fa-solid fa-angle-right"></i>
                             </a>
                         </div>
                         <div class="category__seafood">
-                            <a href="/category/cate_sea.html">
+                            <a href="seafood.html">
                                 <span>해산물</span>  
                                 <i class="fa-solid fa-angle-right"></i>
                             </a>
                         </div>
                         <div class="category__fruit">
-                            <a href="/category/cate_fruit.html">
+                            <a href="fruit.html">
                                 <span>과일</span>  
                                 <i class="fa-solid fa-angle-right"></i>
                             </a>
                         </div>
                         <div class="category__vegetable">
-                            <a href="/category/cate_vegeta.html">
+                            <a href="vegeta.html">
                                 <span>채소</span>  
                                 <i class="fa-solid fa-angle-right"></i>
                             </a>
@@ -59,13 +64,13 @@
                     <!-- 메뉴 사용자 콘텐츠 -->
                     <div class="sidebar__account_content">
                         <div class="sidebar__mypage">
-                            <a href="#">
+                            <a href="/member/mypage.html">
                                 <i class="fa-regular fa-user"></i>
                                 <span>마이페이지</span>
                             </a>
                         </div>
                         <div class="sidebar__favorit">
-                            <a href="#">
+                            <a href="/member/favorite.html">
                                 <i class="fa-regular fa-heart"></i>
                                 <span>찜 목록</span>
                             </a>
@@ -97,106 +102,45 @@
         </div>
 
         <!-- 로고 -->
-        <a href="/home/home_index.html" class="navbar__logo">JANGBOGO</a>
-        
+        <a th:href="@{/}" class="navbar__logo">JANGBOGO</a>
+
         <!-- 로그인 -->
         <div class="navbar__sign">
-            <input type="checkbox" id="navbar__signbtn">
-            <label for="navbar__signbtn">
-                <i id="cheOff" class="fa-solid fa-arrow-right-to-bracket" onclick="checkOn()"></i>
-                <i id="cheOn" class="fa-solid fa-x" onclick="checkOff()"></i>
-            </label>
-
-            <!-- 로그인 버튼 클릭 시 화면-->
-            <div class="navbar__signbar">
-                <h1 class="login__header_title">
-                    <span>개인정보</span>
-                </h1>
-                <hr>
-                
-                <div class="login__content">
-                    <!-- 로그인 -->
-                    <section class="login__form">
-                        <form>
-                            <div class="login__form_title">로그인</div>
-                            <div class="login__email_board">   
-                                <label for="login__email">이메일*</label><br>
-                                <input type="email" id="login__email" dir="auto"
-                                required aria-invalid="false" placeholder="name@example.com"><br>
-                            </div>
-
-                            <div class="login__password_board">
-                                <label for="login__password">비밀번호*</label><br>
-                                <input type="password" id="login__password" dir="auto" 
-                                required aria-invalid="false"><br>
-                                <button type="button" class="login__form_findPass" onclick="findPass()">
-                                    비밀번호를 잊어버리셨나요?
-                                </button>
-                            </div>
-
-                            <button type="submit" class="login__form_loginBtn">로그인</button>
-                        </form>
-                    </section>
-
-                    <!-- 비밀번호 찾기 -->
-                    <section class="login__findpass">
-                        <h1 class="findpass_title">비밀번호 찾기</h1>
-                        <p>이메일로 새로운 비밀번호를 받으시려면 아래에 이메일 주소를 입력해주세요.</p>
-                        <form action="">
-                            <div class="findpass__email_board">   
-                                <label for="findpass__email">이메일*</label><br>
-                                <input type="email" id="findpass__email" dir="auto"
-                                required aria-invalid="false" placeholder="name@example.com"><br>
-                            </div>
-
-                            <div class="findpass__btn">
-                                <button type="submit" class="findpass_ok">전송</button>
-                                <button type="button" class="findpass_cancle" onclick="backLogin()">취소</button>
-                            </div>
-                        </form>
-                    </section>
-
-                    <!-- 계정 생성 -->
-                    <section class="login__register">
-                        <div class="login__register_title">새로 오셨나요?</div>
-                        <p>개인 계정을 생성하시면 다양한 기능을 사용하실 수 있습니다.</p>
-                        <a href="/resister/resister_index.html">새로운 계정 만들기</a>
-                    </section>
-                </div>
-            </div>
+            <a th:href="@{/login}" sec:authorize="!isAuthenticated()"><i id="goLogin" class="fa-solid fa-arrow-right-to-bracket"></i></a>
+            <form th:action="@{/logout}" method="post" sec:authorize="isAuthenticated()">
+                <button type="submit"><i class="fa-solid fa-power-off"></i></button>
+            </form>
         </div>
     </nav>
 
-    <main class="item__board">
+    <main class="main-board">
         <!-- 정렬 -->
         <div class="line__top">
             <p class="cate_title">해산물</p>
             <div class="sort_area">
                 <div class="dropdown">
-                    <button class="jsFilterOpen">
-                        <a href="#">찜 많은 순</a>
-                    </button>
-                    <div class="dropdown-cont">
-                        <ul>
-                            <li class="jsFilter on" data-option="favorit">
-                                <a href="#">찜 많은 순</a>
-                            </li>
-                            <li class="jsFilter" data-option="low_price">
-                                <a href="#">낮은 가격순</a>
-                            </li>
-                            <li class="jsFilter" data-option="high_price">
-                                <a href="#">높은 가격순</a>
-                            </li>
-                        </ul>
-                    </div>
+                    <ul class="dropdown_menu">
+                        <li data-option="standard_sort">
+                            <a href="#" id="sortBtn">정렬 기준</a>
+                            <ul class="dropdown_subMenu">
+                                <li><a href="#" id="sort_favorit" data-option="favorit">찜 많은 순</a></li>
+                                <li><a href="#" id="sort_low" data-option="lowPrice">낮은 가격순</a></li>
+                                <li><a href="#" id="sort_high" data-option="highPrice">높은 가격순</a></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
         
         <div class="cate_itemlist">
+            <div class="hidden" id="scroll-up">
+                <a href="#" class="scrollBtn"><i class="fa-solid fa-arrow-up"></i></a>
+            </div>
+            
             <div class="item">
-                <a href="#">
-                    <img src="/File/items/godeung.png" alt="godeung">
+                <img src="/File/items/godeung.png" alt="godeung">
+                <div class="itemInfo">
                     <span class="marketName">이마트 상봉점</span>
                     <dl>
                         <dt>고등어</dt>
@@ -205,12 +149,12 @@
                     <div class="price_area">
                         <span class="itemPrice">3,000원</span>
                     </div>
-                </a>
+                </div>
                 <button class="itemBtn">찜 목록에 추가</button>
             </div>
             <div class="item">
-                <a href="#">
-                    <img src="/File/items/godeung.png" alt="godeung">
+                <img src="/File/items/godeung.png" alt="godeung">
+                <div class="itemInfo">
                     <span class="marketName">이마트 상봉점</span>
                     <dl>
                         <dt>고등어</dt>
@@ -219,12 +163,12 @@
                     <div class="price_area">
                         <span class="itemPrice">3,000원</span>
                     </div>
-                </a>
+                </div>
                 <button class="itemBtn">찜 목록에 추가</button>
             </div>
             <div class="item">
-                <a href="#">
-                    <img src="/File/items/godeung.png" alt="godeung">
+                <img src="/File/items/godeung.png" alt="godeung">
+                <div class="itemInfo">
                     <span class="marketName">이마트 상봉점</span>
                     <dl>
                         <dt>고등어</dt>
@@ -233,12 +177,12 @@
                     <div class="price_area">
                         <span class="itemPrice">3,000원</span>
                     </div>
-                </a>
+                </div>
                 <button class="itemBtn">찜 목록에 추가</button>
             </div>
             <div class="item">
-                <a href="#">
-                    <img src="/File/items/godeung.png" alt="godeung">
+                <img src="/File/items/godeung.png" alt="godeung">
+                <div class="itemInfo">
                     <span class="marketName">이마트 상봉점</span>
                     <dl>
                         <dt>고등어</dt>
@@ -247,12 +191,12 @@
                     <div class="price_area">
                         <span class="itemPrice">3,000원</span>
                     </div>
-                </a>
+                </div>
                 <button class="itemBtn">찜 목록에 추가</button>
             </div>
             <div class="item">
-                <a href="#">
-                    <img src="/File/items/godeung.png" alt="godeung">
+                <img src="/File/items/godeung.png" alt="godeung">
+                <div class="itemInfo">
                     <span class="marketName">이마트 상봉점</span>
                     <dl>
                         <dt>고등어</dt>
@@ -261,12 +205,12 @@
                     <div class="price_area">
                         <span class="itemPrice">3,000원</span>
                     </div>
-                </a>
+                </div>
                 <button class="itemBtn">찜 목록에 추가</button>
             </div>
             <div class="item">
-                <a href="#">
-                    <img src="/File/items/godeung.png" alt="godeung">
+                <img src="/File/items/godeung.png" alt="godeung">
+                <div class="itemInfo">
                     <span class="marketName">이마트 상봉점</span>
                     <dl>
                         <dt>고등어</dt>
@@ -275,7 +219,91 @@
                     <div class="price_area">
                         <span class="itemPrice">3,000원</span>
                     </div>
-                </a>
+                </div>
+                <button class="itemBtn">찜 목록에 추가</button>
+            </div>
+            <div class="item">
+                <img src="/File/items/godeung.png" alt="godeung">
+                <div class="itemInfo">
+                    <span class="marketName">이마트 상봉점</span>
+                    <dl>
+                        <dt>고등어</dt>
+                        <dd>30cm / 1마리</dd>
+                    </dl>
+                    <div class="price_area">
+                        <span class="itemPrice">3,000원</span>
+                    </div>
+                </div>
+                <button class="itemBtn">찜 목록에 추가</button>
+            </div>
+            <div class="item">
+                <img src="/File/items/godeung.png" alt="godeung">
+                <div class="itemInfo">
+                    <span class="marketName">이마트 상봉점</span>
+                    <dl>
+                        <dt>고등어</dt>
+                        <dd>30cm / 1마리</dd>
+                    </dl>
+                    <div class="price_area">
+                        <span class="itemPrice">3,000원</span>
+                    </div>
+                </div>
+                <button class="itemBtn">찜 목록에 추가</button>
+            </div>
+            <div class="item">
+                <img src="/File/items/godeung.png" alt="godeung">
+                <div class="itemInfo">
+                    <span class="marketName">이마트 상봉점</span>
+                    <dl>
+                        <dt>고등어</dt>
+                        <dd>30cm / 1마리</dd>
+                    </dl>
+                    <div class="price_area">
+                        <span class="itemPrice">3,000원</span>
+                    </div>
+                </div>
+                <button class="itemBtn">찜 목록에 추가</button>
+            </div>
+            <div class="item">
+                <img src="/File/items/godeung.png" alt="godeung">
+                <div class="itemInfo">
+                    <span class="marketName">이마트 상봉점</span>
+                    <dl>
+                        <dt>고등어</dt>
+                        <dd>30cm / 1마리</dd>
+                    </dl>
+                    <div class="price_area">
+                        <span class="itemPrice">3,000원</span>
+                    </div>
+                </div>
+                <button class="itemBtn">찜 목록에 추가</button>
+            </div>
+            <div class="item">
+                <img src="/File/items/godeung.png" alt="godeung">
+                <div class="itemInfo">
+                    <span class="marketName">이마트 상봉점</span>
+                    <dl>
+                        <dt>고등어</dt>
+                        <dd>30cm / 1마리</dd>
+                    </dl>
+                    <div class="price_area">
+                        <span class="itemPrice">3,000원</span>
+                    </div>
+                </div>
+                <button class="itemBtn">찜 목록에 추가</button>
+            </div>
+            <div class="item">
+                <img src="/File/items/godeung.png" alt="godeung">
+                <div class="itemInfo">
+                    <span class="marketName">이마트 상봉점</span>
+                    <dl>
+                        <dt>고등어</dt>
+                        <dd>30cm / 1마리</dd>
+                    </dl>
+                    <div class="price_area">
+                        <span class="itemPrice">3,000원</span>
+                    </div>
+                </div>
                 <button class="itemBtn">찜 목록에 추가</button>
             </div>
         </div>

@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="/css/home.css">
-    <link rel="stylesheet" href="/css/public.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/public.css">
     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
 
-    <script defer src="/js/home.js"></script>
+    <script defer src="js/home.js"></script>
     <script src="https://kit.fontawesome.com/bb430ea525.js"
             crossorigin="anonymous"></script>
 
@@ -34,25 +34,25 @@
                 <!-- 메뉴 카테고리 -->
                 <div class="category">
                     <div class="category__meet">
-                        <a href="/category/cate_meat.html">
+                        <a th:href="@{/category/meat}">
                             <span>축산물</span>
                             <i class="fa-solid fa-angle-right"></i>
                         </a>
                     </div>
                     <div class="category__seafood">
-                        <a href="/category/cate_sea.html">
+                        <a th:href="@{/category/seafood}">
                             <span>해산물</span>
                             <i class="fa-solid fa-angle-right"></i>
                         </a>
                     </div>
                     <div class="category__fruit">
-                        <a href="/category/cate_fruit.html">
+                        <a th:href="@{/category/fruit}">
                             <span>과일</span>
                             <i class="fa-solid fa-angle-right"></i>
                         </a>
                     </div>
                     <div class="category__vegetable">
-                        <a href="/category/cate_vegeta.html">
+                        <a th:href="@{/category/vegeta}">
                             <span>채소</span>
                             <i class="fa-solid fa-angle-right"></i>
                         </a>
@@ -162,22 +162,22 @@
     <section class="home__categoryBoard">
         <div class="blank"></div>
         <div class="home__category">
-            <a href="/category/cate_meat.html" class="home__category_meat">
+            <a th:href="@{/category/meat}" class="home__category_meat">
                 <img src="/File/category/meat.png">
                 <div>축산물</div>
             </a>
 
-            <a href="/category/cate_sea.html" class="home__category_seafood">
+            <a th:href="@{/category/seafood}" class="home__category_seafood">
                 <img src="/File/category/seafood.png">
                 <div>해산물</div>
             </a>
 
-            <a href="/category/cate_fruit.html" class="home__category_fruit">
+            <a th:href="@{/category/fruit}" class="home__category_fruit">
                 <img src="/File/category/fruits.png">
                 <div>과일</div>
             </a>
 
-            <a href="/category/cate_vegeta.html" class="home__category_vegeter">
+            <a th:href="@{/category/vegeta}" class="home__category_vegeter">
                 <img src="/File/category/vegetable.png">
                 <div>채소</div>
             </a>
