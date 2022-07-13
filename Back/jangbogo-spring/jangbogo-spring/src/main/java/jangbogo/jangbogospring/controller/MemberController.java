@@ -1,10 +1,16 @@
 package jangbogo.jangbogospring.controller;
 
+import jangbogo.jangbogospring.domain.Member;
 import jangbogo.jangbogospring.dto.MemberDto;
 import jangbogo.jangbogospring.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
+import java.security.Principal;
+import java.util.Optional;
 
 @Controller
 public class MemberController {
@@ -41,8 +47,11 @@ public class MemberController {
         return result;
     }
 
+    @PreAuthorize("isAuthenticated()")
     @GetMapping("/mypage")
-    public String mypageForm() {
+    public String mypageForm(Principal principal, Model model) {
+        Optional<Member> member = memberService.findEmail(principal.getName());
+        model.addAttribute("member", member);
         return "mypage/mypage";
     }
 
