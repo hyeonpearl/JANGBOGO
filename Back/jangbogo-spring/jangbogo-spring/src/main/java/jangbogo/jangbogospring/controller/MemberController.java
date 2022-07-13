@@ -55,8 +55,11 @@ public class MemberController {
         return "mypage/mypage";
     }
 
+    @PreAuthorize("isAuthenticated()")
     @GetMapping("/editInfo")
-    public String editInfo(){
+    public String editInfo(Principal principal, Model model){
+        Optional<Member> member = memberService.findEmail(principal.getName());
+        model.addAttribute("member", member);
         return "member/edit-info";
     }
 

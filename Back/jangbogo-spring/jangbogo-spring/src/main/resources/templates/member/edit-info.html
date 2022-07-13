@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,7 +29,7 @@
                 <div class="" id="login-1">
                     <div id="email">
                         <label>이메일</label>
-                        <span>name@example.com</span>
+                        <div th:text="${member.get().getEmail()}"></div>
                         <button id="email-btn" type="button">변경</button>
                     </div>
                 </div>
@@ -64,15 +64,15 @@
                 <form>
                     <div>
                         <label>성명</label>
-                        <input type="text" id="modify-name" value="아무개">
+                        <input type="text" id="modify-name" th:value="${member.get().getName()}">
                     </div>
                     <div>
                         <label>연락처</label>
-                        <input type="tel" id="modify-tel" value="010 1234 1234">
+                        <input type="tel" id="modify-tel" th:value="${member.get().getTel()}">
                     </div>
                     <div>
                         <label>주소</label>
-                        <input type="text" id="modify-address" value="서울시 중랑구">
+                        <input type="text" id="modify-address" th:value="${member.get().getAddress()}">
                     </div>
                     <button id="save-info" type="button">저장하기</button>
                 </form>
