@@ -1,7 +1,7 @@
 function backHome() {
     var btn = document.getElementById('register__form_cancle');
 
-    location.replace("/home/home_index.html");
+    location.replace("/home/home.html");
 }
 
 var isCheckedEmail = false;
@@ -20,12 +20,12 @@ function inputEmail(){
     $("#register__form_submit").attr("type", "button");
 }
 
-function checkEmail(){
+function emailCheck(){
     var email = document.getElementById('register__email').value;
     var email_regex = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/;
 
     if(email == ""){
-        alert("이메일을 입력해주세요.");
+        alert.log("이메일을 입력해주세요.");
         return;
     }
 
@@ -34,24 +34,29 @@ function checkEmail(){
         $.ajax({
             async: true,
             type:'POST',
-            data:{email : email},
+            dataType:'json',
+            data:{"email":email},
             url:"/emailCheck",
-            dataType:"text",
+
             success: function(data){
 
-                if(data == 1){
+                if(data.result == 1){
                     alert("존재하는 이메일입니다.");
                 }
-                else{
+                else if(data.result == 0){
                     alert("사용가능한 이메일입니다.");
                     isCheckedEmail = true;
                     $("#register__form_submit").attr("type", "submit");
                 }
-            }
+            },
+           error: function (jqXHR, textStatus, errorThrown)
+           {
+                  alert(errorThrown + " " + textStatus);
+           }
         });
     }
     else
     {
-        alert("이메일 형식으로 작성해주세요.");
+         alert.log("이메일 형식으로 작성해주세요.");
     }
 }

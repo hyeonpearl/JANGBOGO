@@ -1,5 +1,6 @@
 package jangbogo.jangbogospring.controller;
 
+import com.google.gson.JsonObject;
 import jangbogo.jangbogospring.domain.Member;
 import jangbogo.jangbogospring.dto.MemberDto;
 import jangbogo.jangbogospring.service.MemberService;
@@ -10,6 +11,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
 
 @Controller
@@ -28,23 +31,28 @@ public class MemberController {
         return "redirect:/";
     }
 
-    @ResponseBody
     @PostMapping("/emailCheck")
-    public int emailCheck(String email)
+    @ResponseBody
+    public Map<String, Object> emailCheck(@RequestParam("email") String email)
     {
         System.out.println("이메일 체크");
+        // 존재하는 이메일이면 1, 아니면 0 반환
         int result = memberService.isCheckEmail(email);
+
+        Map<String, Object> resultMap = new HashMap<String, Object>();
 
         if(result == 0)
         {
             System.out.println(email + " 사용 가능 이메일입니다.");
+            resultMap.put("result", 0);
         }
         else
         {
             System.out.println(email + " 이미 존재하는 이메일입니다.");
+            resultMap.put("result", 1);
         }
 
-        return result;
+        return resultMap;
     }
 
     @PreAuthorize("isAuthenticated()")

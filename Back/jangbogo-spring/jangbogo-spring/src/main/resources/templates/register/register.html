@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -40,7 +41,7 @@
                         <label class="register__form_email_label" for="register__email">이메일*</label>
                         <div class="email-check">
                             <input id="register__email" type="email" name = "email" onchange="inputEmail()" placeholder="예) name@example.com" required>
-                            <button id="register__email-check" type="button" onclick="checkEmail();" >중복 확인</button>
+                            <button id="register__email-check" type="button" onclick="emailCheck();">중복 확인</button>
                         </div>
                         <p id="email-check-message">이메일을 입력해주세요.</p>
                         <span class="blankspan"></span>
