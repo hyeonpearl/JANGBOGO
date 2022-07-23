@@ -1,21 +1,17 @@
 .navbar {
-    border-bottom: 1px solid var(--black-color);
-}
-
-.navbar__logo {
-    position: relative;
-    left: 40%;
+    display: block;
+    border-bottom: none;
 }
 
 #navbar-cancle {
-    position: absolute;
-    right: 1.5rem;
-    font-size: 1.5rem;
-    text-align: center;
+    position: relative;
+    font-size: 24px;
 }
 
-.navbar__cancle a, .navbar__cancle a i {
-    text-align: center;
+.navbar__logo {
+    position: absolute;
+    top: 0.8rem;
+    left: 40%;
 }
 
 .main-board {
