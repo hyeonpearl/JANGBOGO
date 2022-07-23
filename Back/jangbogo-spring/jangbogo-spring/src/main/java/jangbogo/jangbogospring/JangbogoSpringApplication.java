@@ -13,3 +13,4 @@ public class JangbogoSpringApplication {
 		SpringApplication.run(JangbogoSpringApplication.class, args);
 	}
 }
+
