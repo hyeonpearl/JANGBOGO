@@ -94,6 +94,7 @@
 .home__location #locationTitle {
     font-size: 15px;
     color: var(--black-color);
+    cursor: pointer;
 }
 
 .setLocation {
@@ -200,6 +201,7 @@
     margin: 5px 0 0 0;
     border: 1px solid var(--black-color);
     background-color: var(--white-color);
+    cursor: pointer;
 }
 
 /* 추천 매장 */
