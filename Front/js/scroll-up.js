@@ -1,8 +1,11 @@
-'use strict';
+const scrollBtn = document.getElementById('scroll-up');
+
+function onScrollClick() {
+    window.scrollTo(0, 0);
+}
 
 window.addEventListener('scroll', (event) => {
     let scrollY = this.scrollY;
-    const scrollBtn = document.querySelector('#scroll-up');
 
     const HIDDEN_CLASSNAME = 'hidden';
 
@@ -12,3 +15,4 @@ window.addEventListener('scroll', (event) => {
         scrollBtn.classList.add(HIDDEN_CLASSNAME);
     }
 });
+scrollBtn.addEventListener('click', onScrollClick);
