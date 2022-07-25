@@ -9,13 +9,15 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.security.Principal;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 
-@Controller
+@RestController
+@RequestMapping("/member")
 public class MemberController {
     private final MemberService memberService;
 
@@ -57,22 +59,28 @@ public class MemberController {
 
     @PreAuthorize("isAuthenticated()")
     @GetMapping("/mypage")
-    public String mypageForm(Principal principal, Model model) {
+    public ModelAndView mypageForm(Principal principal, Model model) {
         Optional<Member> member = memberService.findEmail(principal.getName());
         model.addAttribute("member", member);
-        return "mypage/mypage";
+
+        ModelAndView mav = new ModelAndView("member/mypage");
+        return mav;
     }
 
     @PreAuthorize("isAuthenticated()")
     @GetMapping("/editInfo")
-    public String editInfo(Principal principal, Model model){
+    public ModelAndView editInfo(Principal principal, Model model){
         Optional<Member> member = memberService.findEmail(principal.getName());
         model.addAttribute("member", member);
-        return "member/edit-info";
+
+        ModelAndView mav = new ModelAndView("member/edit-info");
+        return mav;
     }
 
     @GetMapping("/favorite")
-    public String favorite() {
-        return "member/favorite";
+    public ModelAndView favorite() {
+
+        ModelAndView mav = new ModelAndView("member/favorite");
+        return mav;
     }
 }

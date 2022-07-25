@@ -1,19 +1,23 @@
 package jangbogo.jangbogospring.controller;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
-@Controller
+@RestController
 public class HomeController {
 
     @GetMapping("/")
-    public String home()
+    public ModelAndView home()
     {
-        return "home/home";
+        ModelAndView mav = new ModelAndView("home/home");
+        return mav;
     }
 
     @GetMapping("/register")
-    public String signUp(){
-        return "register/register";
+    public ModelAndView signUp(){
+        ModelAndView mav = new ModelAndView("register/register");
+        return mav;
     }
 }
