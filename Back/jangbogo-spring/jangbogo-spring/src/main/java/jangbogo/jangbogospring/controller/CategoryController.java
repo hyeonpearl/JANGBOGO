@@ -10,6 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping("/category")
 public class CategoryController {
 
+    // http://localhost:8080/category/fruit
     @GetMapping("/fruit")
     public ModelAndView fruit()
     {
@@ -17,6 +18,7 @@ public class CategoryController {
         return mav;
     }
 
+    // http://localhost:8080/category/meat
     @GetMapping("/meat")
     public ModelAndView meat()
     {
@@ -24,6 +26,7 @@ public class CategoryController {
         return mav;
     }
 
+    // http://localhost:8080/category/seafood
     @GetMapping("/seafood")
     public ModelAndView seafood()
     {
@@ -31,6 +34,7 @@ public class CategoryController {
         return mav;
     }
 
+    // http://localhost:8080/category/vegeta
     @GetMapping("/vegeta")
     public ModelAndView vegeta()
     {

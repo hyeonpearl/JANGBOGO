@@ -25,14 +25,32 @@ public class MemberController {
     public MemberController(MemberService memberService) {
         this.memberService = memberService;
     }
+
+    // http://localhost:8080/member/login
+    @GetMapping("/login")
+    public ModelAndView loginForm() {
+        ModelAndView mav = new ModelAndView("member/login");
+        return mav;
+    }
+
+    // http://localhost:8080/member/registerForm
+    @GetMapping("/registerForm")
+    public ModelAndView registerForm(){
+        ModelAndView mav = new ModelAndView("member/register");
+        return mav;
+    }
+
+    // http://localhost:8080/member/register
     @PostMapping("/register")
-    public String create(MemberDto memberDto){
+    public ModelAndView create(MemberDto memberDto){
 
         memberService.save(memberDto.toEntity());
         //존재하는 이메일이면
-        return "redirect:/";
+        ModelAndView mav = new ModelAndView("redirect:/");
+        return mav;
     }
 
+    // http://localhost:8080/member/emailCheck
     @PostMapping("/emailCheck")
     @ResponseBody
     public Map<String, Object> emailCheck(@RequestParam("email") String email)
@@ -57,6 +75,7 @@ public class MemberController {
         return resultMap;
     }
 
+    // http://localhost:8080/member/mypage
     @PreAuthorize("isAuthenticated()")
     @GetMapping("/mypage")
     public ModelAndView mypageForm(Principal principal, Model model) {
@@ -67,6 +86,7 @@ public class MemberController {
         return mav;
     }
 
+    // http://localhost:8080/member/editInfo
     @PreAuthorize("isAuthenticated()")
     @GetMapping("/editInfo")
     public ModelAndView editInfo(Principal principal, Model model){
@@ -77,6 +97,7 @@ public class MemberController {
         return mav;
     }
 
+    // http://localhost:8080/member/favorite
     @GetMapping("/favorite")
     public ModelAndView favorite() {
 

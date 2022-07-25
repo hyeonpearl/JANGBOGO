@@ -8,6 +8,7 @@ import org.springframework.web.servlet.ModelAndView;
 @RestController
 public class HomeController {
 
+    // http://localhost:8080
     @GetMapping("/")
     public ModelAndView home()
     {
@@ -15,9 +16,5 @@ public class HomeController {
         return mav;
     }
 
-    @GetMapping("/register")
-    public ModelAndView signUp(){
-        ModelAndView mav = new ModelAndView("register/register");
-        return mav;
-    }
+
 }
